@@ -1,0 +1,1764 @@
+{
+  "version": 1,
+  "exportedAt": "2026-11-10T02:33:10.736Z",
+  "links": [
+    {
+      "id": "a6a6bcc6-0f52-4cb8-8ada-b05fa2f3888c",
+      "name": "TYS Siparişler",
+      "url": "https://www.trendyol.com/hesabim/siparislerim",
+      "category": "SAAS",
+      "tags": [
+        "Trendyol"
+      ],
+      "added": 1794277928134
+    },
+    {
+      "id": "57d8ab10-8187-4a53-a255-b24e08945c65",
+      "name": "Amz Siparişler",
+      "url": "https://www.amazon.com.tr/gp/your-account/order-history?ref_=ya_d_c_yo",
+      "category": "SAAS",
+      "tags": [
+        "amazon"
+      ],
+      "added": 1794277866525
+    },
+    {
+      "id": "a9bf3784-bac2-485c-af28-e054ef21fd65",
+      "name": "HB Siparişler",
+      "url": "https://www.hepsiburada.com/siparislerim",
+      "category": "SAAS",
+      "tags": [],
+      "added": 1794277824680
+    },
+    {
+      "id": "084764c7-496b-44c9-adfb-f9a664c3c41a",
+      "name": "n11 Sepet",
+      "url": "https://www.n11.com/hesabim/siparislerim",
+      "category": "SAAS",
+      "tags": [],
+      "added": 1794277695611
+    },
+    {
+      "id": "1b7be9fe-2e08-4909-b6af-8464495f1e87",
+      "name": "TY Siparişler",
+      "url": "https://partner.trendyol.com/orders/shipment-packages/created",
+      "category": "SAAS",
+      "tags": [],
+      "added": 1794277565041
+    },
+    {
+      "id": "cf3ddaf6-5d51-4242-aa2b-dec8f32402db",
+      "name": "TY Sip Muhasebe",
+      "url": "https://partner.trendyol.com/order-records",
+      "category": "SAAS",
+      "tags": [
+        "Trendyol"
+      ],
+      "added": 1794277468395
+    },
+    {
+      "id": "8ab29ab3-0d4e-4ab2-8b5e-40133c2e0ba0",
+      "name": "TY Ödeme",
+      "url": "https://partner.trendyol.com/payments/my-payments/payment-dashboard",
+      "category": "SAAS",
+      "tags": [
+        "Trendyol"
+      ],
+      "added": 1794277456074
+    },
+    {
+      "id": "c4b92f44-be2d-4b54-a255-6880c4ed2994",
+      "name": "Arena Boşbeleş",
+      "url": "https://arena.ai/agent/01a1be58-eeff-7fa0-b165-3285b199a7f7",
+      "category": "SAAS",
+      "tags": [
+        "Arena"
+      ],
+      "added": 1794277451012
+    },
+    {
+      "id": "f21dd02a-16ed-41b5-88f7-12edf9d5a274",
+      "name": "EkibimTürkiye 1",
+      "url": "https://ekibimtrkiye1.com",
+      "category": "Depolama",
+      "tags": [
+        "Design",
+        "Finans"
+      ],
+      "added": 1794275162023
+    },
+    {
+      "id": "f807d003-0c53-4ec8-95d8-df437cc8462a",
+      "name": "MüşteriOptik 2",
+      "url": "https://mterioptik2.com",
+      "category": "Design",
+      "tags": [
+        "Design"
+      ],
+      "added": 1794275162023
+    },
+    {
+      "id": "a7f70786-3ef2-47c7-9817-d5a40aeac861",
+      "name": "VizyonWeb 99",
+      "url": "https://vizyonweb99.com",
+      "category": "Pazarlama",
+      "tags": [
+        "Design"
+      ],
+      "added": 1794275162023
+    },
+    {
+      "id": "dda0bce6-b4b3-4aa1-b1fc-e8c712b9d526",
+      "name": "DigitalX 100",
+      "url": "https://digitalx100.com",
+      "category": "Finans",
+      "tags": [],
+      "added": 1794275162023
+    },
+    {
+      "id": "6398b042-ae98-49c6-8d84-a98be76737ec",
+      "name": "TürkiyeWeb 101",
+      "url": "https://trkiyeweb101.com",
+      "category": "SAAS",
+      "tags": [],
+      "added": 1794275162023
+    },
+    {
+      "id": "6a4e93f1-f929-4f3a-af28-2319c6a1073e",
+      "name": "KareCanlı 102",
+      "url": "https://karecanl102.com",
+      "category": "Geliştirici",
+      "tags": [
+        "Depolama"
+      ],
+      "added": 1794275162023
+    },
+    {
+      "id": "ba36c777-2bf1-4934-90a1-0dbb47892a4e",
+      "name": "DigitalWeb 103",
+      "url": "https://digitalweb103.com",
+      "category": "Finans",
+      "tags": [
+        "Design"
+      ],
+      "added": 1794275162023
+    },
+    {
+      "id": "a86f6864-29e5-48af-b1a1-113c86f80d34",
+      "name": "CanlıDigital 104",
+      "url": "https://canldigital104.com",
+      "category": "Design",
+      "tags": [
+        "Geliştirici",
+        "Depolama"
+      ],
+      "added": 1794275162023
+    },
+    {
+      "id": "357559fb-1e87-4b08-a1f2-811288a170ec",
+      "name": "AkışGelişim 105",
+      "url": "https://akgeliim105.com",
+      "category": "İletişim",
+      "tags": [
+        "SAAS",
+        "Pazarlama"
+      ],
+      "added": 1794275162023
+    },
+    {
+      "id": "3cd67dab-f7f3-4316-8af2-1774bbfa2b67",
+      "name": "MüşteriPro 106",
+      "url": "https://mteripro106.com",
+      "category": "CRM",
+      "tags": [
+        "Depolama"
+      ],
+      "added": 1794275162023
+    },
+    {
+      "id": "870d0f80-d453-4ff0-be8c-d91c5b14e451",
+      "name": "İşİş 107",
+      "url": "https://ii107.com",
+      "category": "Geliştirici",
+      "tags": [
+        "Geliştirici"
+      ],
+      "added": 1794275162023
+    },
+    {
+      "id": "3f584773-77a6-4421-9067-0c3ca448e1ce",
+      "name": "RotaLider 108",
+      "url": "https://rotalider108.com",
+      "category": "Panel",
+      "tags": [
+        "Pazarlama"
+      ],
+      "added": 1794275162023
+    },
+    {
+      "id": "81e3acf6-623e-4879-bf97-1f4d839fbdc3",
+      "name": "İşCanlı 109",
+      "url": "https://icanl109.com",
+      "category": "Pazarlama",
+      "tags": [],
+      "added": 1794275162023
+    },
+    {
+      "id": "892699da-3a69-4072-bddc-946fdb7187e5",
+      "name": "VizyonPro 110",
+      "url": "https://vizyonpro110.com",
+      "category": "Geliştirici",
+      "tags": [
+        "Finans"
+      ],
+      "added": 1794275162023
+    },
+    {
+      "id": "dc9b22c4-78e2-40a9-852a-94bff6edaf91",
+      "name": "SanaKare 111",
+      "url": "https://sanakare111.com",
+      "category": "SAAS",
+      "tags": [],
+      "added": 1794275162023
+    },
+    {
+      "id": "c5c845a1-9369-469c-b96f-3e72578a7212",
+      "name": "OptikSana 112",
+      "url": "https://optiksana112.com",
+      "category": "E-ticaret",
+      "tags": [],
+      "added": 1794275162023
+    },
+    {
+      "id": "dca1db06-a77c-4bfe-97bd-481ac360f007",
+      "name": "LiderX 113",
+      "url": "https://liderx113.com",
+      "category": "E-ticaret",
+      "tags": [],
+      "added": 1794275162023
+    },
+    {
+      "id": "8684dc4c-793c-4a1a-a585-8484ba071091",
+      "name": "MüşteriRota 114",
+      "url": "https://mterirota114.com",
+      "category": "Design",
+      "tags": [],
+      "added": 1794275162023
+    },
+    {
+      "id": "dff16ddb-99a1-47f6-b3ef-e847663c5dd8",
+      "name": "AkışQuantum 115",
+      "url": "https://akquantum115.com",
+      "category": "Panel",
+      "tags": [
+        "Depolama",
+        "Panel"
+      ],
+      "added": 1794275162023
+    },
+    {
+      "id": "bebaf4f7-6cd6-4c64-8c21-b62d3feada48",
+      "name": "WebBulut 116",
+      "url": "https://webbulut116.com",
+      "category": "CRM",
+      "tags": [
+        "Design"
+      ],
+      "added": 1794275162023
+    },
+    {
+      "id": "ee9c6afe-bbca-4702-8cd7-3e1668895b2b",
+      "name": "RotaPro 117",
+      "url": "https://rotapro117.com",
+      "category": "SAAS",
+      "tags": [],
+      "added": 1794275162023
+    },
+    {
+      "id": "3801a182-830c-48fd-833f-f4f2c55294ed",
+      "name": "GelişimZeka 118",
+      "url": "https://geliimzeka118.com",
+      "category": "Depolama",
+      "tags": [
+        "Pazarlama"
+      ],
+      "added": 1794275162023
+    },
+    {
+      "id": "65878560-2ded-426a-9ca3-1346a58ed276",
+      "name": "CanlıDigital 119",
+      "url": "https://canldigital119.com",
+      "category": "Design",
+      "tags": [
+        "Depolama",
+        "Pazarlama"
+      ],
+      "added": 1794275162023
+    },
+    {
+      "id": "c36485bc-04ca-40b0-93d7-1515a076a7b1",
+      "name": "FinansHızlı 120",
+      "url": "https://finanshzl120.com",
+      "category": "Geliştirici",
+      "tags": [],
+      "added": 1794275162023
+    },
+    {
+      "id": "f1d98995-5d82-47e8-a679-7991daddca2c",
+      "name": "NetQuantum 121",
+      "url": "https://netquantum121.com",
+      "category": "E-ticaret",
+      "tags": [
+        "Geliştirici"
+      ],
+      "added": 1794275162023
+    },
+    {
+      "id": "6f9ddb5f-b676-4ba5-8098-699c02e6cabd",
+      "name": "EkibimKare 122",
+      "url": "https://ekibimkare122.com",
+      "category": "Pazarlama",
+      "tags": [],
+      "added": 1794275162023
+    },
+    {
+      "id": "e6bb7a15-5d2d-4cf1-8a99-90fcc8943f75",
+      "name": "Akışİş 123",
+      "url": "https://aki123.com",
+      "category": "Finans",
+      "tags": [
+        "Finans"
+      ],
+      "added": 1794275162023
+    },
+    {
+      "id": "f97b511c-ca38-44cb-8c9c-b0cb792eb765",
+      "name": "ZekaYeni 124",
+      "url": "https://zekayeni124.com",
+      "category": "Panel",
+      "tags": [
+        "Finans",
+        "Geliştirici"
+      ],
+      "added": 1794275162023
+    },
+    {
+      "id": "863aed01-a615-4346-8ba1-079303fde900",
+      "name": "İşWeb 125",
+      "url": "https://iweb125.com",
+      "category": "Geliştirici",
+      "tags": [],
+      "added": 1794275162023
+    },
+    {
+      "id": "8bd8a0bd-4258-4203-856d-a7c17f32044c",
+      "name": "FinansQuantum 126",
+      "url": "https://finansquantum126.com",
+      "category": "SAAS",
+      "tags": [],
+      "added": 1794275162023
+    },
+    {
+      "id": "0f0f8298-c9b0-4e65-950f-15969c84a84d",
+      "name": "BulutX 127",
+      "url": "https://bulutx127.com",
+      "category": "CRM",
+      "tags": [],
+      "added": 1794275162023
+    },
+    {
+      "id": "73e434d3-fac5-4d6a-819a-eaed5b9b1914",
+      "name": "WebTürkiye 128",
+      "url": "https://webtrkiye128.com",
+      "category": "Design",
+      "tags": [],
+      "added": 1794275162023
+    },
+    {
+      "id": "a8a3dc94-7f07-486a-b36f-d3ca3d951fc0",
+      "name": "BulutAkış 129",
+      "url": "https://bulutak129.com",
+      "category": "Finans",
+      "tags": [
+        "SAAS"
+      ],
+      "added": 1794275162023
+    },
+    {
+      "id": "82a6df3d-5a72-4506-a94e-0353cbe51466",
+      "name": "LiderPro 130",
+      "url": "https://liderpro130.com",
+      "category": "Finans",
+      "tags": [],
+      "added": 1794275162023
+    },
+    {
+      "id": "09235571-2790-4a97-b09f-df913985070c",
+      "name": "WebYeni 131",
+      "url": "https://webyeni131.com",
+      "category": "Pazarlama",
+      "tags": [
+        "Finans"
+      ],
+      "added": 1794275162023
+    },
+    {
+      "id": "feb6b6d4-4e25-4d8f-b276-2543f12df758",
+      "name": "YeniNet 132",
+      "url": "https://yeninet132.com",
+      "category": "Depolama",
+      "tags": [],
+      "added": 1794275162023
+    },
+    {
+      "id": "3bc0c8f6-d59a-476f-9898-ac83855a9d18",
+      "name": "WebX 133",
+      "url": "https://webx133.com",
+      "category": "Design",
+      "tags": [
+        "SAAS",
+        "Finans"
+      ],
+      "added": 1794275162023
+    },
+    {
+      "id": "962b9697-2f7e-4b31-a47b-68781bdc029a",
+      "name": "XQuantum 134",
+      "url": "https://xquantum134.com",
+      "category": "Depolama",
+      "tags": [],
+      "added": 1794275162023
+    },
+    {
+      "id": "12e274de-d22e-4db2-9346-143e9ad0f1b6",
+      "name": "ZekaRota 135",
+      "url": "https://zekarota135.com",
+      "category": "Depolama",
+      "tags": [
+        "SAAS",
+        "Geliştirici"
+      ],
+      "added": 1794275162023
+    },
+    {
+      "id": "1a5f1687-1915-4468-9f5e-cb44afd7a0fa",
+      "name": "CanlıEkibim 136",
+      "url": "https://canlekibim136.com",
+      "category": "Depolama",
+      "tags": [
+        "CRM"
+      ],
+      "added": 1794275162023
+    },
+    {
+      "id": "ace05949-0c84-4617-916a-2e38872c5754",
+      "name": "SanaNet 137",
+      "url": "https://sananet137.com",
+      "category": "Finans",
+      "tags": [
+        "Geliştirici",
+        "Finans"
+      ],
+      "added": 1794275162023
+    },
+    {
+      "id": "c3e42f3d-f77b-49a8-8979-a9a94022bb70",
+      "name": "ProQuantum 138",
+      "url": "https://proquantum138.com",
+      "category": "SAAS",
+      "tags": [],
+      "added": 1794275162023
+    },
+    {
+      "id": "d0f96285-6374-4f7e-bd72-344cfb6e9ab9",
+      "name": "SanaHızlı 139",
+      "url": "https://sanahzl139.com",
+      "category": "İletişim",
+      "tags": [
+        "Geliştirici"
+      ],
+      "added": 1794275162023
+    },
+    {
+      "id": "6fed8ba6-d7f6-4fc2-beee-29a3c8c26a4e",
+      "name": "NetWeb 140",
+      "url": "https://netweb140.com",
+      "category": "Pazarlama",
+      "tags": [],
+      "added": 1794275162023
+    },
+    {
+      "id": "d9611abc-a798-49bb-8b33-403866931420",
+      "name": "BulutTürkiye 141",
+      "url": "https://buluttrkiye141.com",
+      "category": "Geliştirici",
+      "tags": [
+        "Design"
+      ],
+      "added": 1794275162023
+    },
+    {
+      "id": "b2545b46-4cf1-4a80-9fc3-686353b82abb",
+      "name": "TürkiyeX 142",
+      "url": "https://trkiyex142.com",
+      "category": "SAAS",
+      "tags": [
+        "CRM"
+      ],
+      "added": 1794275162023
+    },
+    {
+      "id": "26f12b5b-821d-4b40-97a7-494efcbc952c",
+      "name": "EkibimWeb 143",
+      "url": "https://ekibimweb143.com",
+      "category": "Panel",
+      "tags": [],
+      "added": 1794275162023
+    },
+    {
+      "id": "94d20ee1-8c78-4715-8732-d9308d557d6b",
+      "name": "OptikX 144",
+      "url": "https://optikx144.com",
+      "category": "Pazarlama",
+      "tags": [],
+      "added": 1794275162023
+    },
+    {
+      "id": "34706005-8261-44b7-a00a-001b6743d5bd",
+      "name": "RotaEkibim 145",
+      "url": "https://rotaekibim145.com",
+      "category": "Depolama",
+      "tags": [],
+      "added": 1794275162023
+    },
+    {
+      "id": "855fa520-678a-4ea6-b25a-fa3a376e2691",
+      "name": "ProLider 146",
+      "url": "https://prolider146.com",
+      "category": "Depolama",
+      "tags": [],
+      "added": 1794275162023
+    },
+    {
+      "id": "8466a5e7-3a72-4f49-9ba7-b89efc03a73f",
+      "name": "TürkiyeLider 147",
+      "url": "https://trkiyelider147.com",
+      "category": "Pazarlama",
+      "tags": [
+        "Depolama"
+      ],
+      "added": 1794275162023
+    },
+    {
+      "id": "8a37b19f-9e9d-4b75-94a5-29d3c23d5a33",
+      "name": "ZekaFinans 148",
+      "url": "https://zekafinans148.com",
+      "category": "SAAS",
+      "tags": [
+        "Pazarlama"
+      ],
+      "added": 1794275162023
+    },
+    {
+      "id": "ad4056fe-cab1-4887-837f-637e50f66e6a",
+      "name": "MüşteriX 149",
+      "url": "https://mterix149.com",
+      "category": "İletişim",
+      "tags": [
+        "Design"
+      ],
+      "added": 1794275162023
+    },
+    {
+      "id": "badc380d-2e55-4728-94e3-1061c80ce46a",
+      "name": "BulutHızlı 150",
+      "url": "https://buluthzl150.com",
+      "category": "E-ticaret",
+      "tags": [],
+      "added": 1794275162023
+    },
+    {
+      "id": "063e28ca-a2e5-4e3b-b816-5d082162bdbd",
+      "name": "HızlıSana 151",
+      "url": "https://hzlsana151.com",
+      "category": "Design",
+      "tags": [
+        "Geliştirici",
+        "Pazarlama"
+      ],
+      "added": 1794275162023
+    },
+    {
+      "id": "bef8aec3-2d81-4745-83f7-75c46f2b1448",
+      "name": "AkışGelişim 152",
+      "url": "https://akgeliim152.com",
+      "category": "Depolama",
+      "tags": [],
+      "added": 1794275162023
+    },
+    {
+      "id": "27300192-3556-4dfc-98c1-d27b65c9f20d",
+      "name": "SanaWeb 153",
+      "url": "https://sanaweb153.com",
+      "category": "SAAS",
+      "tags": [
+        "CRM"
+      ],
+      "added": 1794275162023
+    },
+    {
+      "id": "e6b65046-e3a0-43ed-9986-a1ad812ee644",
+      "name": "LiderVizyon 154",
+      "url": "https://lidervizyon154.com",
+      "category": "Geliştirici",
+      "tags": [],
+      "added": 1794275162023
+    },
+    {
+      "id": "a415780c-e7c8-454d-91f6-28d747fd3052",
+      "name": "Netİş 155",
+      "url": "https://neti155.com",
+      "category": "Depolama",
+      "tags": [],
+      "added": 1794275162023
+    },
+    {
+      "id": "d62493a0-08e6-4e60-bb15-a4b9f9f600a2",
+      "name": "YeniNet 156",
+      "url": "https://yeninet156.com",
+      "category": "İletişim",
+      "tags": [
+        "Depolama",
+        "Geliştirici"
+      ],
+      "added": 1794275162024
+    },
+    {
+      "id": "86e033df-f760-41ee-911d-c5418b8777b3",
+      "name": "ZekaX 157",
+      "url": "https://zekax157.com",
+      "category": "CRM",
+      "tags": [],
+      "added": 1794275162024
+    },
+    {
+      "id": "1f7780ea-1f75-4ba0-9bfe-883d32500e43",
+      "name": "ProBulut 158",
+      "url": "https://probulut158.com",
+      "category": "Design",
+      "tags": [],
+      "added": 1794275162024
+    },
+    {
+      "id": "0ff6a3f5-3e68-4b05-8629-023e54eba314",
+      "name": "HızlıTürkiye 159",
+      "url": "https://hzltrkiye159.com",
+      "category": "Design",
+      "tags": [
+        "Finans"
+      ],
+      "added": 1794275162024
+    },
+    {
+      "id": "e5466ea8-8e09-4e1b-b063-55003febe26c",
+      "name": "GelişimFinans 160",
+      "url": "https://geliimfinans160.com",
+      "category": "Panel",
+      "tags": [
+        "Finans"
+      ],
+      "added": 1794275162024
+    },
+    {
+      "id": "7527dae9-ec17-4813-ae07-b26807531ae3",
+      "name": "Finansİş 161",
+      "url": "https://finansi161.com",
+      "category": "Pazarlama",
+      "tags": [],
+      "added": 1794275162024
+    },
+    {
+      "id": "bccb2ebb-2183-4aa1-a306-207856559e40",
+      "name": "KareLider 162",
+      "url": "https://karelider162.com",
+      "category": "SAAS",
+      "tags": [
+        "CRM"
+      ],
+      "added": 1794275162024
+    },
+    {
+      "id": "27ec2300-c40c-45e5-ba5e-5d9319129a04",
+      "name": "HızlıMüşteri 163",
+      "url": "https://hzlmteri163.com",
+      "category": "Depolama",
+      "tags": [],
+      "added": 1794275162024
+    },
+    {
+      "id": "688c7be2-bb7a-49f6-9b07-056654557e6d",
+      "name": "GelişimLider 164",
+      "url": "https://geliimlider164.com",
+      "category": "Depolama",
+      "tags": [
+        "Pazarlama",
+        "CRM"
+      ],
+      "added": 1794275162024
+    },
+    {
+      "id": "df1e2382-5aa7-4b7f-aa31-8045a7c3a5eb",
+      "name": "SanaDigital 165",
+      "url": "https://sanadigital165.com",
+      "category": "Finans",
+      "tags": [],
+      "added": 1794275162024
+    },
+    {
+      "id": "4cb57e55-8a46-47d8-b6a9-bb46d6fca8f8",
+      "name": "FinansPro 166",
+      "url": "https://finanspro166.com",
+      "category": "Finans",
+      "tags": [],
+      "added": 1794275162024
+    },
+    {
+      "id": "ec759dd8-bbfe-4e51-9185-b5661132b489",
+      "name": "DigitalHızlı 167",
+      "url": "https://digitalhzl167.com",
+      "category": "Design",
+      "tags": [
+        "SAAS"
+      ],
+      "added": 1794275162024
+    },
+    {
+      "id": "a2ab5d07-0e3a-4981-b625-f616075f968c",
+      "name": "LiderX 168",
+      "url": "https://liderx168.com",
+      "category": "Depolama",
+      "tags": [],
+      "added": 1794275162024
+    },
+    {
+      "id": "10fcd285-4e43-4332-9c92-fb47e12de8a7",
+      "name": "AkışBulut 169",
+      "url": "https://akbulut169.com",
+      "category": "İletişim",
+      "tags": [],
+      "added": 1794275162024
+    },
+    {
+      "id": "0a11f306-ce92-429d-9b68-ca4e13c2ab7f",
+      "name": "DigitalVizyon 170",
+      "url": "https://digitalvizyon170.com",
+      "category": "SAAS",
+      "tags": [],
+      "added": 1794275162024
+    },
+    {
+      "id": "b61667f1-5596-44e7-b83a-db16221b3485",
+      "name": "HızlıNet 171",
+      "url": "https://hzlnet171.com",
+      "category": "İletişim",
+      "tags": [],
+      "added": 1794275162024
+    },
+    {
+      "id": "d2657430-5107-4c5d-bd05-ba3589781cb2",
+      "name": "BulutGelişim 172",
+      "url": "https://bulutgeliim172.com",
+      "category": "Panel",
+      "tags": [
+        "CRM",
+        "Geliştirici"
+      ],
+      "added": 1794275162024
+    },
+    {
+      "id": "93ce2b2d-14f8-44e7-88a5-0041bba19671",
+      "name": "Kareİş 173",
+      "url": "https://karei173.com",
+      "category": "E-ticaret",
+      "tags": [],
+      "added": 1794275162024
+    },
+    {
+      "id": "c58f02b3-70b0-4a35-af09-527d8a609ddb",
+      "name": "NetLider 174",
+      "url": "https://netlider174.com",
+      "category": "Design",
+      "tags": [
+        "Finans"
+      ],
+      "added": 1794275162024
+    },
+    {
+      "id": "ed8babcc-c988-4bef-bc71-40643470f0ea",
+      "name": "HızlıX 175",
+      "url": "https://hzlx175.com",
+      "category": "İletişim",
+      "tags": [
+        "Finans"
+      ],
+      "added": 1794275162024
+    },
+    {
+      "id": "7741977a-c937-40fd-b45c-94e8e910d670",
+      "name": "EkibimBulut 176",
+      "url": "https://ekibimbulut176.com",
+      "category": "Depolama",
+      "tags": [
+        "Design",
+        "Panel"
+      ],
+      "added": 1794275162024
+    },
+    {
+      "id": "ef427f16-dc51-4758-871f-baf130279ad6",
+      "name": "NetPro 177",
+      "url": "https://netpro177.com",
+      "category": "E-ticaret",
+      "tags": [],
+      "added": 1794275162024
+    },
+    {
+      "id": "72d05d6d-c162-4e19-a176-c1eb25a5cab7",
+      "name": "XHızlı 178",
+      "url": "https://xhzl178.com",
+      "category": "Geliştirici",
+      "tags": [],
+      "added": 1794275162024
+    },
+    {
+      "id": "67a8ea41-38b1-43d6-862a-bc46ce5d70b2",
+      "name": "ZekaCanlı 179",
+      "url": "https://zekacanl179.com",
+      "category": "E-ticaret",
+      "tags": [
+        "Depolama",
+        "Finans"
+      ],
+      "added": 1794275162024
+    },
+    {
+      "id": "040f2816-db5a-43cb-8514-f408e0e4bd15",
+      "name": "WebQuantum 180",
+      "url": "https://webquantum180.com",
+      "category": "Pazarlama",
+      "tags": [
+        "SAAS"
+      ],
+      "added": 1794275162024
+    },
+    {
+      "id": "f4fa201a-b6cb-4813-bb01-d9fbc31b20ee",
+      "name": "AkışBulut 181",
+      "url": "https://akbulut181.com",
+      "category": "İletişim",
+      "tags": [
+        "Depolama"
+      ],
+      "added": 1794275162024
+    },
+    {
+      "id": "56f410fe-8b1a-4a68-ac09-45eab91b41e1",
+      "name": "ZekaHızlı 182",
+      "url": "https://zekahzl182.com",
+      "category": "Pazarlama",
+      "tags": [],
+      "added": 1794275162024
+    },
+    {
+      "id": "33e05db4-a569-4f40-bb1c-131b43d372f6",
+      "name": "SanaOptik 183",
+      "url": "https://sanaoptik183.com",
+      "category": "Design",
+      "tags": [
+        "Panel"
+      ],
+      "added": 1794275162024
+    },
+    {
+      "id": "ed4443f6-9ec4-4689-86af-9cf200240cd0",
+      "name": "YeniCanlı 184",
+      "url": "https://yenicanl184.com",
+      "category": "İletişim",
+      "tags": [],
+      "added": 1794275162024
+    },
+    {
+      "id": "57917a6e-d5bf-4c34-98de-8bcee266a5ee",
+      "name": "SanaKare 185",
+      "url": "https://sanakare185.com",
+      "category": "Pazarlama",
+      "tags": [],
+      "added": 1794275162024
+    },
+    {
+      "id": "87448594-8305-44fe-a935-71b0b2d68194",
+      "name": "WebMüşteri 186",
+      "url": "https://webmteri186.com",
+      "category": "Panel",
+      "tags": [],
+      "added": 1794275162024
+    },
+    {
+      "id": "938fbd6e-92de-4575-81ee-c1336b26e270",
+      "name": "MüşteriAkış 187",
+      "url": "https://mteriak187.com",
+      "category": "E-ticaret",
+      "tags": [
+        "CRM"
+      ],
+      "added": 1794275162024
+    },
+    {
+      "id": "e3369079-39e5-4564-a948-f540ae06ab63",
+      "name": "ProGelişim 188",
+      "url": "https://progeliim188.com",
+      "category": "İletişim",
+      "tags": [],
+      "added": 1794275162024
+    },
+    {
+      "id": "2f058f11-19a4-4221-872d-f25c8ef02d0a",
+      "name": "NetZeka 189",
+      "url": "https://netzeka189.com",
+      "category": "Geliştirici",
+      "tags": [
+        "Design"
+      ],
+      "added": 1794275162024
+    },
+    {
+      "id": "35479335-7c10-40fc-ba6d-c42bca66bbe4",
+      "name": "Vizyonİş 190",
+      "url": "https://vizyoni190.com",
+      "category": "E-ticaret",
+      "tags": [],
+      "added": 1794275162024
+    },
+    {
+      "id": "6214b1d2-6186-4ee3-86ff-0296cfb581ea",
+      "name": "XRota 191",
+      "url": "https://xrota191.com",
+      "category": "Geliştirici",
+      "tags": [],
+      "added": 1794275162024
+    },
+    {
+      "id": "3f069381-550d-4c95-baed-5cf2a5675976",
+      "name": "EkibimDigital 192",
+      "url": "https://ekibimdigital192.com",
+      "category": "E-ticaret",
+      "tags": [
+        "CRM",
+        "Design"
+      ],
+      "added": 1794275162024
+    },
+    {
+      "id": "11aa6bd0-8d2b-4755-a717-28e76648d96a",
+      "name": "KareDigital 193",
+      "url": "https://karedigital193.com",
+      "category": "Finans",
+      "tags": [
+        "SAAS"
+      ],
+      "added": 1794275162024
+    },
+    {
+      "id": "e7a30a38-9b17-431a-be44-3d344f3564ec",
+      "name": "İşGelişim 194",
+      "url": "https://igeliim194.com",
+      "category": "E-ticaret",
+      "tags": [],
+      "added": 1794275162024
+    },
+    {
+      "id": "301a358b-5ce4-426c-b07f-cb4b39f1f1c8",
+      "name": "LiderWeb 195",
+      "url": "https://liderweb195.com",
+      "category": "CRM",
+      "tags": [],
+      "added": 1794275162024
+    },
+    {
+      "id": "b916814d-f2c5-4fe9-98c9-a15062b2108e",
+      "name": "GelişimSana 196",
+      "url": "https://geliimsana196.com",
+      "category": "Panel",
+      "tags": [],
+      "added": 1794275162024
+    },
+    {
+      "id": "e9c266b0-a2d0-48ed-8b24-8fc1361cc23a",
+      "name": "HızlıQuantum 197",
+      "url": "https://hzlquantum197.com",
+      "category": "Panel",
+      "tags": [
+        "Design"
+      ],
+      "added": 1794275162024
+    },
+    {
+      "id": "80831bdd-2269-4569-9ccb-776dc6363cd1",
+      "name": "VizyonZeka 198",
+      "url": "https://vizyonzeka198.com",
+      "category": "Depolama",
+      "tags": [
+        "Design"
+      ],
+      "added": 1794275162024
+    },
+    {
+      "id": "b98f0e20-a64c-4729-a044-b7cc33125765",
+      "name": "BulutBulut 199",
+      "url": "https://bulutbulut199.com",
+      "category": "Geliştirici",
+      "tags": [
+        "Finans",
+        "CRM"
+      ],
+      "added": 1794275162024
+    },
+    {
+      "id": "ea101269-d5bd-43d9-a890-83ab5be4b1a0",
+      "name": "EkibimEkibim 200",
+      "url": "https://ekibimekibim200.com",
+      "category": "Geliştirici",
+      "tags": [],
+      "added": 1794275162024
+    },
+    {
+      "id": "7de0b0c8-deb0-451a-8635-ea459c8ddd79",
+      "name": "GelişimLider 201",
+      "url": "https://geliimlider201.com",
+      "category": "İletişim",
+      "tags": [
+        "Geliştirici"
+      ],
+      "added": 1794275162024
+    },
+    {
+      "id": "6c938312-03c5-4c38-b296-71e77e001fa6",
+      "name": "CanlıAkış 202",
+      "url": "https://canlak202.com",
+      "category": "İletişim",
+      "tags": [
+        "Geliştirici"
+      ],
+      "added": 1794275162024
+    },
+    {
+      "id": "d348e63c-6366-49ed-a56d-908bd321a803",
+      "name": "İşVizyon 203",
+      "url": "https://ivizyon203.com",
+      "category": "Geliştirici",
+      "tags": [
+        "Geliştirici"
+      ],
+      "added": 1794275162024
+    },
+    {
+      "id": "d5764bf5-d19d-4415-9b97-922e4a62433f",
+      "name": "DigitalX 204",
+      "url": "https://digitalx204.com",
+      "category": "E-ticaret",
+      "tags": [],
+      "added": 1794275162024
+    },
+    {
+      "id": "101c284d-9b9e-43a3-b9f9-a37db5488921",
+      "name": "LiderWeb 205",
+      "url": "https://liderweb205.com",
+      "category": "Panel",
+      "tags": [
+        "CRM"
+      ],
+      "added": 1794275162024
+    },
+    {
+      "id": "4fcbc8e7-4f01-4fd5-95c6-0309773761e0",
+      "name": "ProBulut 206",
+      "url": "https://probulut206.com",
+      "category": "Depolama",
+      "tags": [
+        "Geliştirici"
+      ],
+      "added": 1794275162024
+    },
+    {
+      "id": "7881b06b-9acc-4bfd-9fac-8eb8997f7659",
+      "name": "ZekaX 207",
+      "url": "https://zekax207.com",
+      "category": "CRM",
+      "tags": [
+        "CRM"
+      ],
+      "added": 1794275162024
+    },
+    {
+      "id": "f1432479-b94f-4bbb-aba9-61a06daf86ab",
+      "name": "TürkiyeYeni 208",
+      "url": "https://trkiyeyeni208.com",
+      "category": "İletişim",
+      "tags": [
+        "Pazarlama"
+      ],
+      "added": 1794275162024
+    },
+    {
+      "id": "d95e0261-a41c-4d3a-b257-834034e4defa",
+      "name": "Müşteriİş 209",
+      "url": "https://mterii209.com",
+      "category": "Depolama",
+      "tags": [],
+      "added": 1794275162024
+    },
+    {
+      "id": "85769f7e-5bdf-4fcf-b398-5071d41982a5",
+      "name": "OptikEkibim 210",
+      "url": "https://optikekibim210.com",
+      "category": "Finans",
+      "tags": [
+        "Panel"
+      ],
+      "added": 1794275162024
+    },
+    {
+      "id": "8fe97763-1900-446d-8346-989c9c45598a",
+      "name": "VizyonHızlı 211",
+      "url": "https://vizyonhzl211.com",
+      "category": "E-ticaret",
+      "tags": [],
+      "added": 1794275162024
+    },
+    {
+      "id": "2477d157-910c-46f2-88fa-fece0e2086c4",
+      "name": "VizyonSana 212",
+      "url": "https://vizyonsana212.com",
+      "category": "Geliştirici",
+      "tags": [],
+      "added": 1794275162024
+    },
+    {
+      "id": "e3aa4590-6deb-42b7-9551-36d091603f91",
+      "name": "YeniDigital 213",
+      "url": "https://yenidigital213.com",
+      "category": "Design",
+      "tags": [
+        "Depolama"
+      ],
+      "added": 1794275162024
+    },
+    {
+      "id": "6d49d818-4b38-40b1-9e50-8a592683313a",
+      "name": "QuantumBulut 214",
+      "url": "https://quantumbulut214.com",
+      "category": "CRM",
+      "tags": [
+        "Geliştirici"
+      ],
+      "added": 1794275162024
+    },
+    {
+      "id": "86609cf9-bb2b-4996-ad6d-3836d634a92e",
+      "name": "LiderKare 215",
+      "url": "https://liderkare215.com",
+      "category": "E-ticaret",
+      "tags": [
+        "Finans"
+      ],
+      "added": 1794275162024
+    },
+    {
+      "id": "78f4f3d6-9c88-41e7-b55c-7ab6fb9a7224",
+      "name": "MüşteriMüşteri 216",
+      "url": "https://mterimteri216.com",
+      "category": "Depolama",
+      "tags": [
+        "Depolama"
+      ],
+      "added": 1794275162024
+    },
+    {
+      "id": "7af8156c-4cc1-45e4-bc98-bc98b7127a79",
+      "name": "VizyonQuantum 217",
+      "url": "https://vizyonquantum217.com",
+      "category": "İletişim",
+      "tags": [],
+      "added": 1794275162024
+    },
+    {
+      "id": "6f0da6fb-6688-473c-844e-8ce212905fcf",
+      "name": "MüşteriSana 218",
+      "url": "https://mterisana218.com",
+      "category": "Panel",
+      "tags": [
+        "SAAS",
+        "Depolama"
+      ],
+      "added": 1794275162024
+    },
+    {
+      "id": "40d43b1a-d411-4015-8362-76d3cf1a80db",
+      "name": "EkibimWeb 219",
+      "url": "https://ekibimweb219.com",
+      "category": "Finans",
+      "tags": [],
+      "added": 1794275162024
+    },
+    {
+      "id": "9ae149b4-13ab-4d61-8cc5-068a336c19a4",
+      "name": "ZekaVizyon 220",
+      "url": "https://zekavizyon220.com",
+      "category": "Geliştirici",
+      "tags": [
+        "Depolama"
+      ],
+      "added": 1794275162024
+    },
+    {
+      "id": "ad9e8353-3d29-4410-964b-12ba8615c073",
+      "name": "OptikZeka 221",
+      "url": "https://optikzeka221.com",
+      "category": "Design",
+      "tags": [],
+      "added": 1794275162024
+    },
+    {
+      "id": "e9f5cbeb-b95c-4172-8fda-edd12df5ebf3",
+      "name": "VizyonX 222",
+      "url": "https://vizyonx222.com",
+      "category": "E-ticaret",
+      "tags": [
+        "Finans"
+      ],
+      "added": 1794275162024
+    },
+    {
+      "id": "c8dd23db-f113-4325-a7c6-efc93a5759b6",
+      "name": "AkışOptik 223",
+      "url": "https://akoptik223.com",
+      "category": "Design",
+      "tags": [
+        "Depolama"
+      ],
+      "added": 1794275162024
+    },
+    {
+      "id": "19987049-fc4a-413f-961c-ecf614282f08",
+      "name": "DigitalYeni 224",
+      "url": "https://digitalyeni224.com",
+      "category": "Depolama",
+      "tags": [
+        "Finans",
+        "SAAS"
+      ],
+      "added": 1794275162024
+    },
+    {
+      "id": "b0976ad3-5cd8-4a2e-a306-5584f344947c",
+      "name": "WebAkış 225",
+      "url": "https://webak225.com",
+      "category": "E-ticaret",
+      "tags": [],
+      "added": 1794275162024
+    },
+    {
+      "id": "a6f8bcbe-3fb5-4c7b-96d0-547fa13f3b6e",
+      "name": "OptikMüşteri 226",
+      "url": "https://optikmteri226.com",
+      "category": "SAAS",
+      "tags": [],
+      "added": 1794275162024
+    },
+    {
+      "id": "e534ee07-e2b5-4449-874e-b2720d816e8c",
+      "name": "GelişimX 227",
+      "url": "https://geliimx227.com",
+      "category": "SAAS",
+      "tags": [
+        "Geliştirici",
+        "Design"
+      ],
+      "added": 1794275162024
+    },
+    {
+      "id": "b9ed66c9-8889-4565-8102-83a2c3468ab9",
+      "name": "ZekaEkibim 228",
+      "url": "https://zekaekibim228.com",
+      "category": "Panel",
+      "tags": [
+        "Panel"
+      ],
+      "added": 1794275162024
+    },
+    {
+      "id": "31518ce0-edc5-44fa-baed-b907b98d5e0c",
+      "name": "WebTürkiye 229",
+      "url": "https://webtrkiye229.com",
+      "category": "Finans",
+      "tags": [
+        "Panel",
+        "SAAS"
+      ],
+      "added": 1794275162024
+    },
+    {
+      "id": "ed095345-619e-4eee-97e1-9cb79df14347",
+      "name": "DigitalGelişim 230",
+      "url": "https://digitalgeliim230.com",
+      "category": "CRM",
+      "tags": [
+        "Geliştirici"
+      ],
+      "added": 1794275162024
+    },
+    {
+      "id": "5e2eacb4-66c0-46b1-86f6-90bd7ef19884",
+      "name": "KareEkibim 231",
+      "url": "https://kareekibim231.com",
+      "category": "Design",
+      "tags": [
+        "Geliştirici"
+      ],
+      "added": 1794275162024
+    },
+    {
+      "id": "77177c6d-8359-46ea-92a2-66436e3d9d01",
+      "name": "HızlıBulut 232",
+      "url": "https://hzlbulut232.com",
+      "category": "Panel",
+      "tags": [
+        "Geliştirici"
+      ],
+      "added": 1794275162024
+    },
+    {
+      "id": "97d5bbfc-e3b7-482d-8edc-8c90dc03498b",
+      "name": "RotaAkış 233",
+      "url": "https://rotaak233.com",
+      "category": "Finans",
+      "tags": [
+        "CRM"
+      ],
+      "added": 1794275162024
+    },
+    {
+      "id": "7dc053e2-c948-4847-9f20-2fe43d0e624f",
+      "name": "RotaAkış 234",
+      "url": "https://rotaak234.com",
+      "category": "Depolama",
+      "tags": [],
+      "added": 1794275162024
+    },
+    {
+      "id": "4472d7fd-be1c-4fce-a1da-0af87ebb1e4c",
+      "name": "NetX 235",
+      "url": "https://netx235.com",
+      "category": "Depolama",
+      "tags": [
+        "Geliştirici"
+      ],
+      "added": 1794275162024
+    },
+    {
+      "id": "39dd32f5-37fa-426d-bdac-f03ba9ea3983",
+      "name": "WebYeni 236",
+      "url": "https://webyeni236.com",
+      "category": "E-ticaret",
+      "tags": [
+        "Pazarlama"
+      ],
+      "added": 1794275162024
+    },
+    {
+      "id": "b728bab6-d89e-4865-95ae-06a0ccb455f4",
+      "name": "EkibimNet 237",
+      "url": "https://ekibimnet237.com",
+      "category": "Depolama",
+      "tags": [],
+      "added": 1794275162024
+    },
+    {
+      "id": "59e34104-31bb-440c-bb7d-fe16bff77d5a",
+      "name": "TürkiyeVizyon 238",
+      "url": "https://trkiyevizyon238.com",
+      "category": "İletişim",
+      "tags": [
+        "Panel",
+        "CRM"
+      ],
+      "added": 1794275162024
+    },
+    {
+      "id": "4ef86557-e805-45b3-b40b-eca22dc2842f",
+      "name": "ProKare 239",
+      "url": "https://prokare239.com",
+      "category": "SAAS",
+      "tags": [],
+      "added": 1794275162024
+    },
+    {
+      "id": "775139f1-55da-4be8-8e25-dea966f8596c",
+      "name": "DigitalDigital 240",
+      "url": "https://digitaldigital240.com",
+      "category": "Panel",
+      "tags": [],
+      "added": 1794275162024
+    },
+    {
+      "id": "eb467042-91a4-4122-8de0-ecbd0fad3473",
+      "name": "HızlıKare 241",
+      "url": "https://hzlkare241.com",
+      "category": "SAAS",
+      "tags": [
+        "Finans"
+      ],
+      "added": 1794275162024
+    },
+    {
+      "id": "135bacf3-fdf3-4990-91da-abbd30152213",
+      "name": "TürkiyeZeka 242",
+      "url": "https://trkiyezeka242.com",
+      "category": "E-ticaret",
+      "tags": [],
+      "added": 1794275162024
+    },
+    {
+      "id": "bfd86148-f056-4902-9713-8a593b57159b",
+      "name": "YeniLider 243",
+      "url": "https://yenilider243.com",
+      "category": "Depolama",
+      "tags": [
+        "Pazarlama"
+      ],
+      "added": 1794275162024
+    },
+    {
+      "id": "875609af-9f99-450b-9525-c5d29e82a614",
+      "name": "KareGelişim 244",
+      "url": "https://karegeliim244.com",
+      "category": "CRM",
+      "tags": [],
+      "added": 1794275162024
+    },
+    {
+      "id": "021cb064-9f19-4fc1-b673-833805a77cba",
+      "name": "LiderX 245",
+      "url": "https://liderx245.com",
+      "category": "Geliştirici",
+      "tags": [],
+      "added": 1794275162024
+    },
+    {
+      "id": "6ea191e4-cd14-4394-8b50-8a802d2a3a8b",
+      "name": "XDigital 246",
+      "url": "https://xdigital246.com",
+      "category": "Depolama",
+      "tags": [],
+      "added": 1794275162024
+    },
+    {
+      "id": "98c354ca-f973-41b3-a801-4a0a71d49e11",
+      "name": "HızlıSana 247",
+      "url": "https://hzlsana247.com",
+      "category": "CRM",
+      "tags": [],
+      "added": 1794275162024
+    },
+    {
+      "id": "bfa6c8cd-ca25-45c6-9803-2b764ca2b56b",
+      "name": "SanaCanlı 248",
+      "url": "https://sanacanl248.com",
+      "category": "CRM",
+      "tags": [],
+      "added": 1794275162024
+    },
+    {
+      "id": "e40afa51-fc5a-4acc-957a-3490376380d5",
+      "name": "VizyonKare 249",
+      "url": "https://vizyonkare249.com",
+      "category": "Geliştirici",
+      "tags": [
+        "Geliştirici"
+      ],
+      "added": 1794275162024
+    },
+    {
+      "id": "3cbbec3b-b0d3-4793-bd4a-de52a25a1d28",
+      "name": "OptikYeni 250",
+      "url": "https://optikyeni250.com",
+      "category": "CRM",
+      "tags": [],
+      "added": 1794275162024
+    },
+    {
+      "id": "140517ef-464e-49c5-bf5a-4b9f14993edf",
+      "name": "VizyonBulut 252",
+      "url": "https://vizyonbulut252.com",
+      "category": "Depolama",
+      "tags": [],
+      "added": 1794275162024
+    },
+    {
+      "id": "c71cdca7-9402-4508-9ae3-5eb8a0344aed",
+      "name": "Rotaİş 253",
+      "url": "https://rotai253.com",
+      "category": "İletişim",
+      "tags": [
+        "Pazarlama",
+        "SAAS"
+      ],
+      "added": 1794275162024
+    },
+    {
+      "id": "cd8b351d-d5ee-4ad3-8d31-9474fc61e59f",
+      "name": "TürkiyeEkibim 358",
+      "url": "https://trkiyeekibim358.com",
+      "category": "Design",
+      "tags": [
+        "Finans"
+      ],
+      "added": 1794275162025
+    },
+    {
+      "id": "25317da5-a89a-42f9-892a-a3cb96c3f11c",
+      "name": "TürkiyeGelişim 359",
+      "url": "https://trkiyegeliim359.com",
+      "category": "Pazarlama",
+      "tags": [],
+      "added": 1794275162025
+    },
+    {
+      "id": "b6429f20-5f24-4451-a772-d7081b40ce1b",
+      "name": "ProYeni 360",
+      "url": "https://proyeni360.com",
+      "category": "İletişim",
+      "tags": [
+        "Finans"
+      ],
+      "added": 1794275162025
+    },
+    {
+      "id": "7b26ab2f-198a-4674-a184-c9ec3a437ca4",
+      "name": "DigitalLider 398",
+      "url": "https://digitallider398.com",
+      "category": "İletişim",
+      "tags": [
+        "Design"
+      ],
+      "added": 1794275162025
+    },
+    {
+      "id": "46ba90e3-9869-477e-8531-d00cdc57d14f",
+      "name": "XKare 399",
+      "url": "https://xkare399.com",
+      "category": "İletişim",
+      "tags": [],
+      "added": 1794275162025
+    },
+    {
+      "id": "67278dd9-9e10-40af-bafb-36108dbbd543",
+      "name": "MüşteriAkış 400",
+      "url": "https://mteriak400.com",
+      "category": "Finans",
+      "tags": [],
+      "added": 1794275162025
+    }
+  ],
+  "sessions": [
+    {
+      "id": "1cadc619-5541-46d9-9710-a601cf731d0f",
+      "name": "Tamer",
+      "links": [
+        {
+          "id": "f21dd02a-16ed-41b5-88f7-12edf9d5a274",
+          "name": "EkibimTürkiye 1",
+          "url": "https://ekibimtrkiye1.com",
+          "category": "Depolama",
+          "tags": [
+            "Design",
+            "Finans"
+          ],
+          "added": 1794275162023
+        },
+        {
+          "id": "f807d003-0c53-4ec8-95d8-df437cc8462a",
+          "name": "MüşteriOptik 2",
+          "url": "https://mterioptik2.com",
+          "category": "Design",
+          "tags": [
+            "Design"
+          ],
+          "added": 1794275162023
+        },
+        {
+          "id": "fa5da3f5-7ef1-47c9-8f37-e70629fb824e",
+          "name": "KareVizyon 4",
+          "url": "https://karevizyon4.com",
+          "category": "CRM",
+          "tags": [
+            "Pazarlama"
+          ],
+          "added": 1794275162023
+        },
+        {
+          "id": "74864c4e-dabb-4075-9bfb-c97152d2451a",
+          "name": "TürkiyeOptik 5",
+          "url": "https://trkiyeoptik5.com",
+          "category": "Design",
+          "tags": [],
+          "added": 1794275162023
+        },
+        {
+          "id": "fc44a803-910c-4871-8f92-96230df62d5d",
+          "name": "LiderBulut 7",
+          "url": "https://liderbulut7.com",
+          "category": "Depolama",
+          "tags": [],
+          "added": 1794275162023
+        },
+        {
+          "id": "c4b92f44-be2d-4b54-a255-6880c4ed2994",
+          "name": "Arena Boşbeleş",
+          "url": "https://arena.ai/agent/01a1be58-eeff-7fa0-b165-3285b199a7f7",
+          "category": "SAAS",
+          "tags": [
+            "Arena"
+          ],
+          "added": 1794275521662
+        }
+      ],
+      "created": 1794275307154
+    },
+    {
+      "id": "5fd8054d-533d-434a-9838-f73972fc319b",
+      "name": "Trendyol",
+      "links": [
+        {
+          "id": "1b7be9fe-2e08-4909-b6af-8464495f1e87",
+          "name": "TY Siparişler",
+          "url": "https://partner.trendyol.com/orders/shipment-packages/created",
+          "category": "SAAS",
+          "tags": [],
+          "added": 1794277565041
+        },
+        {
+          "id": "8ab29ab3-0d4e-4ab2-8b5e-40133c2e0ba0",
+          "name": "TY Ödeme",
+          "url": "https://partner.trendyol.com/payments/my-payments/payment-dashboard",
+          "category": "SAAS",
+          "tags": [
+            "Trendyol"
+          ],
+          "added": 1794275871492
+        },
+        {
+          "id": "cf3ddaf6-5d51-4242-aa2b-dec8f32402db",
+          "name": "TY Sip Muhasebe",
+          "url": "https://partner.trendyol.com/order-records",
+          "category": "SAAS",
+          "tags": [
+            "Trendyol"
+          ],
+          "added": 1794277261301
+        }
+      ],
+      "created": 1794277571891
+    },
+    {
+      "id": "be4ce7ad-8d2f-49ef-a2db-74f7cbe2003a",
+      "name": "Boş",
+      "links": [],
+      "created": 1794276961734
+    },
+    {
+      "id": "67687239-86c8-490c-ad42-033fff05c679",
+      "name": "Satinalma",
+      "links": [
+        {
+          "id": "a6a6bcc6-0f52-4cb8-8ada-b05fa2f3888c",
+          "name": "TYS Siparişler",
+          "url": "https://www.trendyol.com/hesabim/siparislerim",
+          "category": "SAAS",
+          "tags": [
+            "Trendyol"
+          ],
+          "added": 1794277898715
+        },
+        {
+          "id": "a9bf3784-bac2-485c-af28-e054ef21fd65",
+          "name": "HB Siparişler",
+          "url": "https://www.hepsiburada.com/siparislerim",
+          "category": "SAAS",
+          "tags": [],
+          "added": 1794277824680
+        },
+        {
+          "id": "57d8ab10-8187-4a53-a255-b24e08945c65",
+          "name": "Amz Siparişler",
+          "url": "https://www.amazon.com.tr/gp/your-account/order-history?ref_=ya_d_c_yo",
+          "category": "SAAS",
+          "tags": [
+            "amazon"
+          ],
+          "added": 1794277866525
+        },
+        {
+          "id": "084764c7-496b-44c9-adfb-f9a664c3c41a",
+          "name": "n11 Sepet",
+          "url": "https://www.n11.com/hesabim/siparislerim",
+          "category": "SAAS",
+          "tags": [],
+          "added": 1794277695611
+        }
+      ],
+      "created": 1794277952343
+    }
+  ],
+  "workspace": [
+    {
+      "id": "a6a6bcc6-0f52-4cb8-8ada-b05fa2f3888c",
+      "name": "TYS Siparişler",
+      "url": "https://www.trendyol.com/hesabim/siparislerim",
+      "category": "SAAS",
+      "tags": [
+        "Trendyol"
+      ],
+      "added": 1794277898715
+    },
+    {
+      "id": "a9bf3784-bac2-485c-af28-e054ef21fd65",
+      "name": "HB Siparişler",
+      "url": "https://www.hepsiburada.com/siparislerim",
+      "category": "SAAS",
+      "tags": [],
+      "added": 1794277824680
+    },
+    {
+      "id": "57d8ab10-8187-4a53-a255-b24e08945c65",
+      "name": "Amz Siparişler",
+      "url": "https://www.amazon.com.tr/gp/your-account/order-history?ref_=ya_d_c_yo",
+      "category": "SAAS",
+      "tags": [
+        "amazon"
+      ],
+      "added": 1794277866525
+    },
+    {
+      "id": "084764c7-496b-44c9-adfb-f9a664c3c41a",
+      "name": "n11 Sepet",
+      "url": "https://www.n11.com/hesabim/siparislerim",
+      "category": "SAAS",
+      "tags": [],
+      "added": 1794277695611
+    }
+  ],
+  "viewMode": "grid",
+  "activeSessionId": "67687239-86c8-490c-ad42-033fff05c679",
+  "extraTags": []
+}

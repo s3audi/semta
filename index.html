@@ -1,1140 +1,2267 @@
 <!DOCTYPE html>
-<html lang="en" itemscope itemtype="http://schema.org/WebPage">
-  <head>
-    
-
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-
- 
-
-
-  
-  <meta name="description" content="Front Page Content beautifulhugo supports content on your front page. Edit /content/_index.md to change what appears here. Delete /content/_index.md if you don&rsquo;t want any content here.">
-  <meta name="author" content="Some Person"/><script type="application/ld+json">
-{
-    "@context": "http://schema.org",
-    "@type": "WebSite",
-    "name": "Beautiful Hugo",
-    
-    "url": "https:\/\/basinkoygazetecilersitesi.com\/public\/"
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="public, max-age=31536000, immutable">
+<meta http-equiv="Expires" content="Fri, 31 Dec 9999 23:59:59 GMT">
+<title>Arçalar — Minimal Web Launcher</title>
+<link rel="manifest" href="manifest.json">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  background: #f7f7fb;
+  color: #1a1a2e;
+  line-height: 1.5;
+  user-select: none;
+  padding-left: 200px;
+  padding-right: 200px;
 }
-</script><script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "Organization",
-  "name": "",
-  "url": "https:\/\/basinkoygazetecilersitesi.com\/public\/"
-  
-  
-  
-  
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; width: 100%; }
+
+header {
+  border-bottom: 1px solid #e5e5ea;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
-</script>
+header .container { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 20px; }
+.logo { font-size: 20px; font-weight: 800; letter-spacing: -0.4px; color: #1a1a2e; }
+nav { display: flex; gap: 6px; }
+.nav-btn {
+  background: transparent;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #666;
+}
+.nav-btn:hover { background: #f1f1f1; color: #1a1a2e; }
+.nav-btn.active { background: #2563eb; color: #fff; }
+.user { font-size: 12.5px; color: #888; }
 
-<meta property="og:title" content="Beautiful Hugo" />
-<meta property="og:description" content="Front Page Content beautifulhugo supports content on your front page. Edit /content/_index.md to change what appears here. Delete /content/_index.md if you don&rsquo;t want any content here.">
-<meta property="og:image" content="https://basinkoygazetecilersitesi.com/public/img/avatar-icon.png" />
-<meta property="og:url" content="https://basinkoygazetecilersitesi.com/public/" />
-<meta property="og:type" content="website" />
-<meta property="og:site_name" content="Beautiful Hugo" />
+.workspace-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+.workspace-actions { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.view-group { display: flex; gap: 6px; border: 1px solid #ddd; border-radius: 6px; background: #fff; padding: 2px; }
+.view-btn {
+  background: transparent;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  color: #666;
+}
+.view-btn.active { background: #2563eb; color: #fff; }
+.view-btn:hover { background: #f1f1f1; }
 
-  <meta name="twitter:title" content="Beautiful Hugo" />
-  <meta name="twitter:description" content="Front Page Content beautifulhugo supports content on your front page. Edit /content/_index.md to change what appears here. Delete /content/_index.md if you don&rsquo;t want any content here.">
-  <meta name="twitter:image" content="https://basinkoygazetecilersitesi.com/public/img/avatar-icon.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:site" content="@username" />
-  <meta name="twitter:creator" content="@username" />
-  <link href='https://basinkoygazetecilersitesi.com/public/img/favicon.ico' rel='icon' type='image/x-icon'/>
-  <meta name="generator" content="Hugo 0.111.3">
-  <link rel="alternate" href="https://basinkoygazetecilersitesi.com/public/index.xml" type="application/rss+xml" title="Beautiful Hugo"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://basinkoygazetecilersitesi.com/public/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
-  <link rel="stylesheet" href="https://basinkoygazetecilersitesi.com/public/css/highlight.min.css" /><link rel="stylesheet" href="https://basinkoygazetecilersitesi.com/public/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+.filter-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  background: #fef3c7;
+  color: #92400e;
+  border: 1px solid #f59e0b;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.filter-badge .remove-filter {
+  background: transparent;
+  border: none;
+  color: #92400e;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  padding: 0 2px;
+}
+.filter-badge .remove-filter:hover { color: #78350f; text-decoration: underline; }
 
+.session-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  background: #eef6ff;
+  color: #2563eb;
+  border: 1px solid #2563eb;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.session-chip .remove-session {
+  background: transparent;
+  border: none;
+  color: #2563eb;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  padding: 0 2px;
+}
+.session-chip .remove-session:hover { color: #1d4ed8; text-decoration: underline; }
 
-  </head>
-  <body>
-    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="https://basinkoygazetecilersitesi.com/public/">Beautiful Hugo</a>
+.workspace { padding: 24px 0; display: flex; flex-direction: column; gap: 16px; min-height: 60vh; }
+.empty-state {
+  text-align: center;
+  color: #666;
+  padding: 70px 20px;
+  border: 2px dashed #ddd;
+  border-radius: 16px;
+  background: #fcfcfd;
+}
+.empty-icon { font-size: 44px; margin-bottom: 10px; display: block; }
+.empty-state p { margin-bottom: 6px; font-size: 15px; }
+.hint { font-size: 13px; color: #999; margin-top: 10px; }
+kbd {
+  background: #eaeaea;
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-family: ui-monospace, SFMono-Regular, monospace;
+  font-size: 0.85em;
+}
+
+.card.dragging { opacity: 0.5; border: 2px dashed #2563eb; }
+.card.drag-over { background: #eef6ff; }
+.link-row.dragging { opacity: 0.6; border: 2px dashed #2563eb; }
+.session-link-item.dragging { opacity: 0.5; border: 2px dashed #2563eb; }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 16px;
+}
+.card {
+  background: #fff;
+  border: 1px solid #eef0f5;
+  border-radius: 12px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  cursor: grab;
+}
+.card:active { cursor: grabbing; }
+.card-index {
+  font-size: 11px;
+  font-weight: 900;
+  color: #2563eb;
+  background: #eef6ff;
+  border: 1px solid #2563eb;
+  border-radius: 6px;
+  width: 20px; height: 20px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.card-media {
+  width: 40px; height: 40px; border-radius: 8px;
+  background: #e9ecef; display: flex; align-items: center; justify-content: center;
+  font-weight: 800; color: #444; flex-shrink: 0;
+  position: relative;
+}
+.card-media-img {
+  width: 100%; height: 100%; object-fit: cover; border-radius: 8px; display: block;
+}
+.card-fallback {
+  font-weight: 800; color: #444; flex-shrink: 0;
+}
+.card-info { flex: 1; min-width: 0; }
+.card-title { font-weight: 700; font-size: 15px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: pointer; margin-left: 6px; }
+.card-title:hover { color: #2563eb; text-decoration: underline; }
+.card-url { font-size: 12px; color: #666; word-break: break-all; margin-top: 4px; }
+.card-tags {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+  align-items: center;
+}
+.card-actions { display: flex; gap: 8px; flex-shrink: 0; }
+.icon-btn {
+  background: transparent;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  width: 28px; height: 28px;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+  display: flex; align-items: center; justify-content: center;
+}
+.icon-btn:hover { background: #f1f1f1; border-color: #bbb; }
+.icon-btn.remove:hover { background: #fee2e2; border-color: #ef4444; color: #ef4444; }
+
+.tag-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10.5px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: #eef6ff;
+  color: #2563eb;
+  cursor: pointer;
+  border: 1px solid #bfdbfe;
+}
+.tag-pill:hover { background: #dbeafe; border-color: #93c5fd; }
+.tag-pill.remove {
+  background: #fee2e2;
+  color: #dc2626;
+  border-color: #fecaca;
+}
+.tag-pill.remove:hover { background: #fecaca; }
+
+.workspace.view-list .cards { display: block; gap: 0; }
+.workspace.view-list .card {
+  display: block;
+  padding: 12px 16px;
+  cursor: default;
+}
+.workspace.view-list .card-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.workspace.view-list .card-index { margin-right: 6px; flex-shrink: 0; }
+.workspace.view-list .card-media { width: 36px; height: 36px; font-size: 14px; }
+.workspace.view-list .card-actions { gap: 6px; }
+.workspace.view-list .card-actions .icon-btn { width: 26px; height: 26px; font-size: 14px; }
+
+.workspace.view-compact .cards { display: block; gap: 6px; }
+.workspace.view-compact .card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  font-size: 13px;
+  border-radius: 8px;
+}
+.workspace.view-compact .card-index { margin-right: 4px; flex-shrink: 0; }
+.workspace.view-compact .card-media { width: 28px; height: 28px; font-size: 12px; }
+.workspace.view-compact .card-info { flex: 1; }
+.workspace.view-compact .card-title { font-size: 13px; font-weight: 700; }
+.workspace.view-compact .card-url { font-size: 11px; margin-top: 2px; color: #888; }
+.workspace.view-compact .card-actions { gap: 4px; }
+.workspace.view-compact .card-actions .icon-btn { width: 24px; height: 24px; font-size: 13px; }
+
+.tab-panel { padding: 24px 0; animation: fadeIn 0.2s ease; }
+#tab-links { margin-top: 0; }
+#tab-links .panel-header { margin-bottom: 10px; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+.panel-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 14px; flex-wrap: wrap; }
+.panel-header h2 { font-size: 18px; font-weight: 800; }
+.sub { font-size: 13px; color: #666; }
+
+.table-wrap { display: flex; flex-direction: column; gap: 8px; }
+.link-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 150px auto;
+  gap: 8px;
+  align-items: center;
+  padding: 10px 12px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+}
+.link-row:hover { background: #fafafa; border-color: #ddd; }
+.link-row.dragging { cursor: grabbing; }
+.lr-url { font-size: 12px; color: #555; word-break: break-all; }
+.lr-cat { font-size: 12px; color: #888; }
+.lr-act { display: flex; gap: 6px; justify-content: flex-end; align-items: center; }
+.session-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  background: #fff;
+  cursor: grab;
+}
+.session-item:active {
+  cursor: grabbing;
+}
+.session-item > div:first-child { display: flex; flex-direction: column; gap: 2px; flex: 1; }
+.session-item .name { font-weight: 700; }
+.session-item .meta { font-size: 12px; color: #666; }
+.session-item .btns { display: flex; gap: 6px; align-items: center; }
+
+.session-link-list {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fff;
+  padding: 4px;
+  max-height: 260px;
+  overflow-y: auto;
+}
+.session-link-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  background: #fafafa;
+  cursor: grab;
+}
+.session-link-item.dragging { opacity: 0.5; border: 2px dashed #2563eb; background: #fff; }
+.session-link-item .drag-handle { cursor: grab; font-size: 14px; user-select: none; color: #999; }
+.session-link-item .name { font-weight: 700; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.session-link-item .url { font-size: 11px; color: #888; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin-left: 8px; }
+.session-link-item .remove {
+  background: #fee2e2;
+  border: none;
+  color: #dc2626;
+  border-radius: 4px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+  display: flex; align-items: center; justify-content: center;
+}
+.session-link-item .remove:hover { background: #fecaca; }
+
+.btn {
+  background: #2563eb; color: #fff; border: none;
+  padding: 8px 14px; border-radius: 6px; cursor: pointer; font-size: 14px;
+}
+.btn:hover { background: #1d4ed8; }
+.btn-ghost {
+  background: transparent; color: #2563eb; border: 1px solid #2563eb;
+  padding: 8px 14px; border-radius: 6px; cursor: pointer; font-size: 14px;
+}
+.btn-ghost:hover { background: #eef6ff; }
+.btn-danger { background: #ef4444; color: #fff; }
+.btn-danger:hover { background: #dc2626; }
+.btn-sm { padding: 6px 10px; font-size: 13px; }
+
+form { display: flex; flex-direction: column; gap: 10px; max-width: 520px; }
+form label { font-size: 13px; font-weight: 700; color: #555; }
+form input, form select, form textarea {
+  padding: 8px 10px; border: 1px solid #ccc; border-radius: 6px; font-size: 14px; width: 100%;
+}
+.actions { display: flex; gap: 8px; margin-top: 6px; }
+.actions > * { flex: 1; }
+
+.tag-suggestions {
+  border: 1px solid #ddd;
+  border-top: none;
+  border-radius: 0 0 6px 6px;
+  background: #fff;
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 4px;
+  z-index: 100;
+  position: relative;
+}
+.tag-suggestion {
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 13px;
+}
+.tag-suggestion:hover { background: #eef6ff; }
+.tag-suggestion.active-sugg { background: #dbeafe; }
+
+.hidden { display: none !important; }
+#search-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.45);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 50; padding: 24px;
+}
+.search-card {
+  background: #fff; width: min(740px, 94vw); max-height: 88vh;
+  border-radius: 16px; box-shadow: 0 24px 80px rgba(0,0,0,0.3);
+  display: flex; flex-direction: column; overflow: hidden;
+}
+.search-header {
+  padding: 16px 24px; font-weight: 800; border-bottom: 1px solid #eee;
+  background: #fafafa;
+}
+#search-input {
+  width: 100%; padding: 14px 24px; font-size: 18px;
+  border: none; border-bottom: 1px solid #eee; outline: none;
+}
+#search-input::placeholder { color: #aaa; }
+#search-count { padding: 8px 24px; font-size: 12.5px; color: #888; background: #fafafa; border-bottom: 1px solid #eee; }
+#search-results { overflow: auto; max-height: 42vh; }
+.search-result {
+  padding: 12px 24px; border-bottom: 1px solid #f2f2f2;
+  cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 12px;
+}
+.search-result:hover { background: #f7f7f7; }
+.search-result.highlight { background: #eef6ff; }
+.search-result.empty {
+  cursor: default;
+  background: #fff8f0;
+  border: 1px dashed #f59e0b;
+}
+.sr-left { display: flex; align-items: center; gap: 12px; flex: 1; min-width: 0; }
+.sr-avatar {
+  width: 32px; height: 32px; border-radius: 8px; background: #e9ecef;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 800; font-size: 14px; color: #444; flex-shrink: 0;
+}
+.sr-text { min-width: 0; }
+.sr-name { font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sr-meta { font-size: 12px; color: #888; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.sr-hint { font-size: 11px; color: #999; flex-shrink: 0; white-space: nowrap; }
+.search-help {
+  padding: 12px 24px; font-size: 12.5px; color: #666;
+  border-top: 1px solid #eee; background: #fafafa;
+}
+.search-help kbd { background: #eee; padding: 1px 5px; border-radius: 3px; margin: 0 2px; }
+
+.modal {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.5);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 60; padding: 20px;
+}
+.modal-content {
+  background: #fff; width: min(640px, 92vw); max-height: 90vh;
+  overflow: auto; border-radius: 12px; padding: 24px;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.35); position: relative;
+}
+.modal-close {
+  position: absolute; top: 10px; right: 14px;
+  background: none; border: none; font-size: 26px; cursor: pointer; color: #888; line-height: 1;
+}
+.modal-close:hover { color: #1a1a2e; }
+
+#sticky-left-bar {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 200px;
+  max-height: calc(100vh - 120px);
+  background: #fff;
+  border-right: 2px dashed #94a3b8;
+  padding: 12px;
+  overflow-y: auto;
+  z-index: 20;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.06);
+}
+#sticky-left-bar .tag-header {
+  font-size: 13px;
+  font-weight: 800;
+  color: #1a1a2e;
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 2px dashed #94a3b8;
+}
+#sticky-left-bar .left-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12.5px;
+  margin-bottom: 8px;
+  border: 1px solid transparent;
+}
+#sticky-left-bar .left-item:hover { background: #f1f5f9; border-color: #cbd5e1; }
+#sticky-left-bar .left-item.active { background: #eef6ff; border-color: #2563eb; color: #2563eb; }
+#sticky-left-bar .left-item .name { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+#sticky-left-bar .left-item .count { font-size: 11px; color: #94a3b8; background: #e2e8f0; padding: 2px 6px; border-radius: 10px; }
+#sticky-left-bar .left-item .save-icon {
+  margin-left: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  opacity: 0.5;
+}
+#sticky-left-bar .left-item .save-icon:hover { opacity: 1; color: #16a34a; }
+#sticky-left-bar .left-item .remove {
+  background: transparent;
+  border: none;
+  color: #dc2626;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  padding: 0 2px;
+  opacity: 0.6;
+}
+#sticky-left-bar .left-item .remove:hover { opacity: 1; }
+
+#sticky-tag-bar {
+  position: fixed;
+  top: 60px;
+  right: 0;
+  width: 180px;
+  max-height: calc(100vh - 120px);
+  background: #fff;
+  border-left: 1px solid #e5e5ea;
+  padding: 12px;
+  overflow-y: auto;
+  z-index: 100;
+  box-shadow: -2px 0 8px rgba(0,0,0,0.06);
+  pointer-events: auto;
+}
+#sticky-tag-bar .tag-header {
+  font-size: 13px;
+  font-weight: 800;
+  color: #1a1a2e;
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #eef0f5;
+}
+#sticky-tag-bar .tag-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12.5px;
+  margin-bottom: 6px;
+  transition: background 0.1s;
+}
+#sticky-tag-bar .tag-item.active {
+  background: #eef6ff;
+  border: 1px solid #2563eb;
+  color: #2563eb;
+}
+#sticky-tag-bar .tag-item:hover:not(.active) { background: #f1f5f9; }
+#sticky-tag-bar .tag-item .remove {
+  margin-left: auto;
+  background: transparent;
+  border: none;
+  color: #dc2626;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  padding: 0 2px;
+  opacity: 0.6;
+}
+#sticky-tag-bar .tag-item .remove:hover { opacity: 1; }
+#sticky-tag-bar .tag-count {
+  font-size: 11px;
+  color: #999;
+}
+#sticky-tag-bar .add-section {
+  margin-top: 16px;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+}
+#sticky-tag-bar .add-section input {
+  width: 100%;
+  padding: 6px 8px;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 6px;
+}
+#sticky-tag-bar .add-section button {
+  width: 100%;
+  padding: 6px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+#sticky-tag-bar .add-section button:hover { background: #1d4ed8; }
+
+@media (max-width: 1024px) {
+  body { padding-right: 0; }
+  #sticky-tag-bar { display: none; }
+}
+@media (max-width: 640px) {
+  header .container { flex-direction: column; align-items: stretch; gap: 12px; }
+  nav { justify-content: center; }
+  .link-row { grid-template-columns: 1fr 1fr auto; }
+  .lr-act { flex-direction: column; }
+  .workspace-actions { flex-direction: column; align-items: stretch; }
+  .workspace-actions .btn { width: 100%; }
+}
+</style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">Arçalar</div>
+      <nav>
+        <button class="nav-btn active" data-tab="workspace">Boş Sayfa</button>
+        <button class="nav-btn" data-tab="links">Linkler</button>
+        <button class="nav-btn" data-tab="sessions">Oturumlar</button>
+      </nav>
+      <div class="user">Minimal launcher · lokal depolama</div>
     </div>
-
-    <div class="collapse navbar-collapse" id="main-navbar">
-      <ul class="nav navbar-nav navbar-right">
-        
-          
-            <li>
-              <a title="Blog" href="/public/">Blog</a>
-            </li>
-          
-        
-          
-            <li class="navlinks-container">
-              <a class="navlinks-parent">Samples</a>
-              <div class="navlinks-children">
-                
-                  <a href="/public/post/2017-03-07-bigimg-sample">Big Image Sample</a>
-                
-                  <a href="/public/post/2017-03-05-math-sample">Math Sample</a>
-                
-                  <a href="/public/post/2016-03-08-code-sample">Code Sample</a>
-                
-              </div>
-            </li>
-          
-        
-          
-            <li>
-              <a title="About" href="/public/page/about/">About</a>
-            </li>
-          
-        
-          
-            <li>
-              <a title="Tags" href="/public/tags">Tags</a>
-            </li>
-          
-        
-
-        
-
-        
-      </ul>
-    </div>
-
-    
-      <div class="avatar-container">
-        <div class="avatar-img-border">
-          <a title="Beautiful Hugo" href="https://basinkoygazetecilersitesi.com/public/">
-            <img class="avatar-img" src="https://basinkoygazetecilersitesi.com/public/img/avatar-icon.png" alt="Beautiful Hugo" />
-          </a>
-        </div>
-      </div>
-    
-
-  </div>
-</nav>
-
-
-
-
-    
-
-
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-<div class="pswp__bg"></div>
-
-<div class="pswp__scroll-wrap">
-    
-    <div class="pswp__container">
-      <div class="pswp__item"></div>
-      <div class="pswp__item"></div>
-      <div class="pswp__item"></div>
-    </div>
-    
-    <div class="pswp__ui pswp__ui--hidden">
-    <div class="pswp__top-bar">
-      
-      <div class="pswp__counter"></div>
-      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-      <button class="pswp__button pswp__button--share" title="Share"></button>
-      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-      
-      
-      <div class="pswp__preloader">
-        <div class="pswp__preloader__icn">
-          <div class="pswp__preloader__cut">
-            <div class="pswp__preloader__donut"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-      <div class="pswp__share-tooltip"></div>
-    </div>
-    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-    </button>
-    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-    </button>
-    <div class="pswp__caption">
-      <div class="pswp__caption__center"></div>
-    </div>
-    </div>
-    </div>
-</div>
-
-
-  
-  
-  
-
-
-
-
-
-
-  
-
-  <header class="header-section ">
-    
-    
-    <div class="intro-header no-img">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <div class="page-heading">
-              
-                <h1>Beautiful Hugo</h1>
-              
-              
-                <hr class="small">
-              
-              
-                
-                  <span class="page-subheading">Build a beautiful and simple website in minutes</span>
-                
-              
-              
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  
   </header>
 
+  <div class="container" id="app">
 
-    
-  <div role="main" class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        
-          <div class="well">
-            <h2 id="front-page-content">Front Page Content</h2>
-<p><code>beautifulhugo</code> supports content on your front page. Edit <code>/content/_index.md</code> to change what appears here. Delete <code>/content/_index.md</code> if you don&rsquo;t want any content here.</p>
-
+    <main class="workspace" id="tab-workspace">
+      <div class="workspace-header" id="workspace-header">
+        <div class="workspace-actions">
+          <div class="view-group" id="view-group">
+            <button class="view-btn active" data-view="grid">Grid</button>
+            <button class="view-btn" data-view="list">Liste</button>
+            <button class="view-btn" data-view="compact">Sıkı</button>
           </div>
-        
-
-        <div class="posts-list">
-          
-          
-            <article class="post-preview">
-    <a href="https://basinkoygazetecilersitesi.com/public/post/2017-03-20-photoswipe-gallery-sample/">
-        <h2 class="post-title">Photoswipe Gallery Sample</h2>
-        
-        <h3 class="post-subtitle">
-            Making a Gallery
-        </h3>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on March 20, 2017
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;215&nbsp;words
-  
-  
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Some Person
-    
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        <p>Beautiful Hugo adds a few custom shortcodes created by <a href="https://www.liwen.id.au/heg/">Li-Wen Yip</a> and <a href="https://github.com/GjjvdBurg/HugoPhotoSwipe">Gert-Jan van den Berg</a> for making galleries with <a href="http://photoswipe.com">PhotoSwipe</a> .</p>
-
-
-
-<div class="gallery caption-position-bottom caption-effect-fade hover-effect-zoom hover-transition" itemscope itemtype="http://schema.org/ImageGallery">
-	  
-  
-  <link rel="stylesheet" href="https://basinkoygazetecilersitesi.com/public/css/hugo-easy-gallery.css" />
-  <div class="box" >
-    <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <div class="img" style="background-image: url('https://basinkoygazetecilersitesi.com/public//img/hexagon-thumb.jpg');">
-        <img itemprop="thumbnail" src="/img/hexagon-thumb.jpg" alt="/img/hexagon-thumb.jpg"/>
-      </div>
-      <a href="/img/hexagon.jpg" itemprop="contentUrl"></a>
-    </figure>
-  </div>
-
-  
-  
-  <div class="box" >
-    <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <div class="img" style="background-image: url('https://basinkoygazetecilersitesi.com/public//img/sphere-thumb.jpg');">
-        <img itemprop="thumbnail" src="/img/sphere-thumb.jpg" alt="Sphere"/>
-      </div>
-      <a href="/img/sphere.jpg" itemprop="contentUrl"></a>
-        <figcaption>
-            <p>Sphere</p>
-        </figcaption>
-    </figure>
-  </div>
-
-  
-  
-  <div class="box" >
-    <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <div class="img" style="background-image: url('https://basinkoygazetecilersitesi.com/public//img/triangle-thumb.jpg');">
-        <img itemprop="thumbnail" src="/img/triangle-thumb.jpg" alt="This is a long comment about a triangle"/>
-      </div>
-      <a href="/img/triangle.jpg" itemprop="contentUrl"></a>
-        <figcaption>
-            <p>Triangle</p>
-        </figcaption>
-    </figure>
-  </div>
-
-
-</div>
-        <a href="https://basinkoygazetecilersitesi.com/public/post/2017-03-20-photoswipe-gallery-sample/" class="post-read-more">[Read More]</a>
-        
-    </div>
-
-    
-    <div class="blog-tags">
-        
-        <a href="https://basinkoygazetecilersitesi.com/public//tags/example/">example</a>&nbsp;
-        
-        <a href="https://basinkoygazetecilersitesi.com/public//tags/photoswipe/">photoswipe</a>&nbsp;
-        
-    </div>
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://basinkoygazetecilersitesi.com/public/post/2017-03-07-bigimg-sample/">
-        <h2 class="post-title">Big Image Sample</h2>
-        
-        <h3 class="post-subtitle">
-            Using Multiple Images
-        </h3>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on March 7, 2017
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;191&nbsp;words
-  
-  
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Some Person
-    
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        <p>The image banners at the top of the page are refered to as &ldquo;bigimg&rdquo; in this theme. They are optional, and one more more can be specified. If more than one is specified, the images rotate every 10 seconds. In the front matter, bigimgs are specified using an array of hashes.</p>
-        <a href="https://basinkoygazetecilersitesi.com/public/post/2017-03-07-bigimg-sample/" class="post-read-more">[Read More]</a>
-        
-    </div>
-
-    
-    <div class="blog-tags">
-        
-        <a href="https://basinkoygazetecilersitesi.com/public//tags/example/">example</a>&nbsp;
-        
-        <a href="https://basinkoygazetecilersitesi.com/public//tags/bigimg/">bigimg</a>&nbsp;
-        
-    </div>
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://basinkoygazetecilersitesi.com/public/post/2017-03-05-math-sample/">
-        <h2 class="post-title">Math Sample</h2>
-        
-        <h3 class="post-subtitle">
-            Using KaTeX
-        </h3>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on March 5, 2017
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;120&nbsp;words
-  
-  
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Some Person
-    
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        <p>KaTeX can be used to generate complex math formulas server-side.</p>
-<p>$$
-\phi = \frac{(1+\sqrt{5})}{2} = 1.6180339887\cdots
-$$</p>
-<p>Additional details can be found on <a href="https://github.com/Khan/KaTeX">GitHub</a> or on the <a href="http://tiddlywiki.com/plugins/tiddlywiki/katex/">Wiki</a>.</p>
-        <a href="https://basinkoygazetecilersitesi.com/public/post/2017-03-05-math-sample/" class="post-read-more">[Read More]</a>
-        
-    </div>
-
-    
-    <div class="blog-tags">
-        
-        <a href="https://basinkoygazetecilersitesi.com/public//tags/example/">example</a>&nbsp;
-        
-        <a href="https://basinkoygazetecilersitesi.com/public//tags/math/">math</a>&nbsp;
-        
-    </div>
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://basinkoygazetecilersitesi.com/public/post/2016-03-08-code-sample/">
-        <h2 class="post-title">Code Sample</h2>
-        
-        <h3 class="post-subtitle">
-            Using Hugo or Pygments
-        </h3>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on March 8, 2016
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;183&nbsp;words
-  
-  
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Some Person
-    
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        <p>The following are two code samples using syntax highlighting.</p>
-        <a href="https://basinkoygazetecilersitesi.com/public/post/2016-03-08-code-sample/" class="post-read-more">[Read More]</a>
-        
-    </div>
-
-    
-    <div class="blog-tags">
-        
-        <a href="https://basinkoygazetecilersitesi.com/public//tags/example/">example</a>&nbsp;
-        
-        <a href="https://basinkoygazetecilersitesi.com/public//tags/code/">code</a>&nbsp;
-        
-    </div>
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://basinkoygazetecilersitesi.com/public/post/2015-02-26-flake-it-till-you-make-it/">
-        <h2 class="post-title">Flake it till you make it</h2>
-        
-        <h3 class="post-subtitle">
-            Excerpt from Soulshaping by Jeff Brown
-        </h3>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on February 26, 2015
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;3&nbsp;minutes
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;443&nbsp;words
-  
-  
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Some Person
-    
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        Under what circumstances should we step off a path? When is it essential that we finish what we start? If I bought a bag of peanuts and had an allergic reaction, no one would fault me if I threw it out. If I ended a relationship with a woman who hit me, no one would say that I had a commitment problem. But if I walk away from a seemingly secure route because my soul has other ideas, I am a flake?
-        <a href="https://basinkoygazetecilersitesi.com/public/post/2015-02-26-flake-it-till-you-make-it/" class="post-read-more">[Read More]</a>
-        
-    </div>
-
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://basinkoygazetecilersitesi.com/public/post/2015-02-20-test-markdown/">
-        <h2 class="post-title">Test markdown</h2>
-        
-        <h3 class="post-subtitle">
-            Each post also has a subtitle
-        </h3>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on February 20, 2015
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;95&nbsp;words
-  
-  
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Some Person
-    
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        You can write regular markdown here and Hugo will automatically convert it to a nice webpage. I strongly encourage you to take 5 minutes to learn how to write in markdown - it&rsquo;ll teach you how to transform regular text into bold/italics/headings/tables/etc.
-Here is some bold text
-Here is a secondary heading Here&rsquo;s a useless table:
-Number Next number Previous number Five Six Four Ten Eleven Nine Seven Eight Six Two Three One How about a yummy crepe?
-        <a href="https://basinkoygazetecilersitesi.com/public/post/2015-02-20-test-markdown/" class="post-read-more">[Read More]</a>
-        
-    </div>
-
-    
-    <div class="blog-tags">
-        
-        <a href="https://basinkoygazetecilersitesi.com/public//tags/example/">example</a>&nbsp;
-        
-        <a href="https://basinkoygazetecilersitesi.com/public//tags/markdown/">markdown</a>&nbsp;
-        
-    </div>
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://basinkoygazetecilersitesi.com/public/post/2015-02-13-hamlet-monologue/">
-        <h2 class="post-title">To be</h2>
-        
-        <h3 class="post-subtitle">
-            ... or not to be?
-        </h3>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on February 13, 2015
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;275&nbsp;words
-  
-  
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Some Person
-    
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        To be, or not to be&ndash;that is the question: Whether &rsquo;tis nobler in the mind to suffer The slings and arrows of outrageous fortune Or to take arms against a sea of troubles And by opposing end them. To die, to sleep&ndash; No more&ndash;and by a sleep to say we end The heartache, and the thousand natural shocks That flesh is heir to. &lsquo;Tis a consummation Devoutly to be wished. To die, to sleep&ndash; To sleep&ndash;perchance to dream: ay, there&rsquo;s the rub, For in that sleep of death what dreams may come When we have shuffled off this mortal coil, Must give us pause.
-        <a href="https://basinkoygazetecilersitesi.com/public/post/2015-02-13-hamlet-monologue/" class="post-read-more">[Read More]</a>
-        
-    </div>
-
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://basinkoygazetecilersitesi.com/public/post/2015-01-27-dear-diary/">
-        <h2 class="post-title">Dear diary</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on January 27, 2015
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;78&nbsp;words
-  
-  
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Some Person
-    
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        What is it with that Mary girl? Dragging me to school every day. As if I had a choice. What you don&rsquo;t hear in those nursery rhymes is that she starves me if I don&rsquo;t go to school with her; it&rsquo;s the only way I can stay alive! I&rsquo;m thinking about being adopted by Little Bo Peep, sure I may get lost, but anything is better than being with Mary and those little brats at school (shudder, shudder).
-        <a href="https://basinkoygazetecilersitesi.com/public/post/2015-01-27-dear-diary/" class="post-read-more">[Read More]</a>
-        
-    </div>
-
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://basinkoygazetecilersitesi.com/public/post/2015-01-19-soccer/">
-        <h2 class="post-title">Soccer</h2>
-        
-        <h3 class="post-subtitle">
-            Best sport ever!
-        </h3>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on January 19, 2015
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;216&nbsp;words
-  
-  
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Some Person
-    
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        From Wikipedia:
-Association football, more commonly known as football or soccer,[2] is a sport played between two teams of eleven players with a spherical ball. It is played by 250 million players in over 200 countries, making it the world&rsquo;s most popular sport.[3][4][5][6] The game is played on a rectangular field with a goal at each end. The object of the game is to score by getting the ball into the opposing goal.
-        <a href="https://basinkoygazetecilersitesi.com/public/post/2015-01-19-soccer/" class="post-read-more">[Read More]</a>
-        
-    </div>
-
-    
-
-</article>
-          
-            <article class="post-preview">
-    <a href="https://basinkoygazetecilersitesi.com/public/post/2015-01-15-pirates/">
-        <h2 class="post-title">Pirates arrrr</h2>
-        
-        
-        
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-  
-  
-  <i class="fas fa-calendar"></i>&nbsp;Posted on January 15, 2015
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;1&nbsp;minutes
-  
-  
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;78&nbsp;words
-  
-  
-    
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Some Person
-    
-  
-  
-</span>
-
-
-    </p>
-    <div class="post-entry">
-        
-        Piracy is typically an act of robbery or criminal violence at sea. The term can include acts committed on land, in the air, or in other major bodies of water or on a shore. It does not normally include crimes committed against persons traveling on the same vessel as the perpetrator (e.g. one passenger stealing from others on the same vessel). The term has been used throughout history to refer to raids across land borders by non-state agents.
-        <a href="https://basinkoygazetecilersitesi.com/public/post/2015-01-15-pirates/" class="post-read-more">[Read More]</a>
-        
-    </div>
-
-    
-
-</article>
-          
+          <div id="filter-badge-container" class="hidden"></div>
+          <div class="session-select-wrap" style="margin-left:8px;">
+            <label style="font-size:12px;color:#666;margin-right:6px">Oturum:</label>
+            <select id="session-select" style="padding:6px 8px;border:1px solid #ccc;border-radius:6px;font-size:13px;background:#fff"></select>
+          </div>
+          <button class="btn" id="open-all">Hepsini Aç</button>
+          <button class="btn btn-ghost" id="clear-workspace">Temizle</button>
+          <button class="btn btn-ghost" id="save-new-session" title="Geçerli bağlantıları yeni bir oturum olarak kaydet">Yeni Oturum Kaydet</button>
+          <button class="btn btn-ghost" id="export-data" title="Tüm ayarları dışa aktar">Dışa Aktar</button>
+          <button class="btn btn-ghost" id="import-data" title="Ayarları içe aktar">İçe Aktar</button>
+          <input type="file" id="import-file" accept=".json" style="display:none">
         </div>
+      </div>
+      <div class="empty-state hidden" id="workspace-empty">
+        <div class="empty-icon">⎋</div>
+        <p>Boş sayfa. <kbd>F</kbd> arama · <kbd>O</kbd> oturumlar · Kartları sürükleyerek sıralayın.</p>
+        <p class="hint">Başlığa tıkla → Düzenle · Üstündeyken <kbd>A</kbd> → Aç · Etiketlere tıkla → Süz · Aramadan sürükleyip buraya bırak → Ekle</p>
+      </div>
+      <div class="cards" id="cards"></div>
+    </main>
 
-        
-          <ul class="pager main-pager">
-            
-            
-              <li class="next">
-                <a href="https://basinkoygazetecilersitesi.com/public/page/2/">Older Posts &rarr;</a>
-              </li>
-            
-          </ul>
-        
+    <section class="tab-panel" id="tab-links">
+      <div class="panel-header">
+        <h2>Kayıtlı Bağlantılar</h2>
+        <button class="btn" id="add-link">+ Yeni Bağlantı</button>
+      </div>
+      <div class="table-wrap" id="links-list"></div>
+    </section>
+
+    <section class="tab-panel hidden" id="tab-sessions">
+      <div class="panel-header">
+        <h2>Oturumlar (Session)</h2>
+        <span class="sub">Açık bağlantıları grubun olarak kaydedip, sonraki gün kaldığınız yerden devam edin.</span>
+      </div>
+      <div id="sessions-list"></div>
+    </section>
+
+  </div>
+
+  <div id="search-overlay" class="hidden">
+    <div class="search-card">
+      <div class="search-header">Bağlantı Ara</div>
+      <input type="text" id="search-input" placeholder="Bağlantı adı, URL veya kategori yazın..." autocomplete="off" autocapitalize="none" spellcheck="false">
+      <div class="search-count" id="search-count"></div>
+      <ul id="search-results"></ul>
+      <div class="search-help">
+        <kbd>↑ ↓</kbd> Gez · <kbd>Enter</kbd> Aç · <kbd>Shift</kbd>+<kbd>G</kbd> Sayfaya Yerleştir · <kbd>Esc</kbd> Kapat
       </div>
     </div>
   </div>
 
-      
-    <div class="page-meta">
-  
-  
-  
-</div>
+  <div id="modal" class="modal hidden">
+    <button class="modal-close" id="modal-close">×</button>
+    <div id="modal-content"></div>
+  </div>
 
-
-  
-<footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <ul class="list-inline text-center footer-links">
-          
-              <li>
-		
-		  <a href="mailto:youremail@domain.com" title="Email me">
-		
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-		
-		  <a href="https://www.facebook.com/username" title="Facebook">
-		
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-		
-		  <a href="https://github.com/username" title="GitHub">
-		
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-		
-		  <a href="https://gitlab.com/username" title="GitLab">
-		
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-gitlab fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-		
-		  <a href="https://bitbucket.org/username" title="Bitbucket">
-		
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-bitbucket fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-		
-		  <a href="https://twitter.com/username" title="Twitter">
-		
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-		
-		  <a href="https://username.slack.com/" title="Slack">
-		
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-slack fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-		
-		  <a href="https://reddit.com/u/username" title="Reddit">
-		
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-reddit-alien fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-		
-		  <a href="https://linkedin.com/in/username" title="LinkedIn">
-		
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-		
-		  <a href="https://www.xing.com/profile/username" title="Xing">
-		
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-xing fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-		
-		  <a href="https://stackoverflow.com/users/XXXXXXX/username" title="StackOverflow">
-		
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-stack-overflow fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-		
-		  <a href="https://www.snapchat.com/add/username" title="Snapchat">
-		
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-snapchat-ghost fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-		
-		  <a href="https://www.instagram.com/username" title="Instagram">
-		
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-		
-		  <a href="https://www.youtube.com/user/username" title="Youtube">
-		
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-youtube fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-		
-		  <a href="https://soundcloud.com/username" title="SoundCloud">
-		
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-soundcloud fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-		
-		  <a href="https://open.spotify.com/user/username" title="Spotify">
-		
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-spotify fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-		
-		  <a href="https://username.bandcamp.com/" title="Bandcamp">
-		
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-bandcamp fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-		
-		  <a href="https://itch.io/profile/username" title="Itch.io">
-		
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fas fa-gamepad fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-		
-		  <a href="https://vk.com/username" title="VK">
-		
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-vk fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-		
-		  <a href="https://paypal.me/username" title="PayPal">
-		
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-paypal fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-		
-		  <a href="https://telegram.me/username" title="Telegram">
-		
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-telegram fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-		
-		  <a href="https://500px.com/username" title="500px">
-		
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-500px fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-		
-		  <a href="https://codepen.io/username" title="CodePen">
-		
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-codepen fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-		
-		  <a href="https://www.kaggle.com/username" title="kaggle">
-		
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-kaggle fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-		
-		  <a rel="me"href="https://url" title="Mastodon">
-		
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-mastodon fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-		
-		  <a href="https://weibo.com/username" title="Weibo">
-		
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-weibo fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-		
-		  <a href="https://discord.gg/invite%20code%20%28https://discord.gg/XXXXXXX%29" title="Discord">
-		
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-discord fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-		
-		  <a href="https://www.strava.com/athletes/userid" title="Strava">
-		
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-strava fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-          
-          <li>
-            <a href="/public/index.xml" title="RSS">
-              <span class="fa-stack fa-lg">
-                <i class="fas fa-circle fa-stack-2x"></i>
-                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
-          
-        </ul>
-        <p class="credits copyright text-muted">
-          
-            
-              <a href="yourwebsite.com">Some Person</a>
-            
-          
-
-          &nbsp;&bull;&nbsp;&copy;
-          
-            2017
-          
-
-          
-            &nbsp;&bull;&nbsp;
-            <a href="https://basinkoygazetecilersitesi.com/public/">Beautiful Hugo</a>
-          
-        </p>
-        
-        <p class="credits theme-by text-muted">
-          <a href="https://gohugo.io">Hugo v0.111.3</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
-          
-        </p>
-      </div>
+  <div id="sticky-left-bar">
+    <div class="tag-header">Oturumlar</div>
+    <div id="sticky-left-list"></div>
+  </div>
+  <div id="sticky-tag-bar">
+    <div class="tag-header">Etiketler</div>
+    <div id="sticky-tag-list"></div>
+    <div class="add-section">
+      <input id="sticky-new-tag" placeholder="Yeni etiket ekle">
+      <button id="sticky-add-tag">Ekle</button>
     </div>
   </div>
-</footer><script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-<script src="https://basinkoygazetecilersitesi.com/public/js/main.js"></script>
-<script src="https://basinkoygazetecilersitesi.com/public/js/highlight.min.js"></script>
-<script> hljs.initHighlightingOnLoad(); </script>
-<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://basinkoygazetecilersitesi.com/public/js/load-photoswipe.js"></script>
+<script>
+(function(){
+  'use strict';
 
+  function $id(id){ return document.getElementById(id); }
+  function esc(s){ return String(s).replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c] || c)); }
 
+  const LS_LINKS = 'arcalar_links_v1';
+  const LS_SESSIONS = 'arcalar_sessions_v1';
+  const LS_WORKSPACE = 'arcalar_workspace_v1';
+  const LS_VIEW = 'arcalar_view_v1';
+  const LS_ACTIVE_SESSION = 'arcalar_active_session_v1';
 
+  const CATEGORIES = ['SAAS','CRM','E-ticaret','Panel','Geliştirici','İletişim','Finans','Depolama','Design','Pazarlama'];
+  const WORDS = ['Akış','Bulut','Canlı','Digital','Ekibim','Finans','Gelişim','Hızlı','İş','Kare','Lider','Müşteri','Net','Optik','Pro','Quantum','Rota','Sana','Türkiye','Vizyon','Web','X','Yeni','Zeka'];
 
+  function uid(){ return crypto.randomUUID ? crypto.randomUUID() : Date.now().toString(36)+Math.random().toString(36).slice(2); }
 
+  function randTags(){
+    const pool = ['YouTube','SAAS','CRM','E-ticaret','Panel','Geliştirici','İletişim','Finans','Depolama','Design','Pazarlama'];
+    const n = Math.floor(Math.random()*3);
+    const t = [];
+    for(let i=0;i<n;i++){
+      const tag = pool[Math.floor(Math.random()*pool.length)];
+      if(!t.includes(tag)) t.push(tag);
+    }
+    return t;
+  }
 
+  function seedLinks(){
+    const links=[];
+    for(let i=0;i<400;i++){
+      const cat=CATEGORIES[Math.floor(Math.random()*CATEGORIES.length)];
+      const w1=WORDS[Math.floor(Math.random()*WORDS.length)];
+      const w2=WORDS[Math.floor(Math.random()*WORDS.length)];
+      const name=w1+w2+' '+(i+1);
+      links.push({id:uid(),name:name,url:'https://'+name.toLowerCase().replace(/[^a-z0-9]+/g,'')+'.com',category:cat,tags:randTags(),added:Date.now()});
+    }
+    return links;
+  }
 
+  let links = JSON.parse(localStorage.getItem(LS_LINKS));
+  if(!links || !Array.isArray(links) || links.length===0) links = seedLinks();
+  links.forEach(l=>{ if(!Array.isArray(l.tags)) l.tags = []; });
+  let sessions = JSON.parse(localStorage.getItem(LS_SESSIONS)) || [];
+  if(!Array.isArray(sessions)) sessions = [];
+  let workspace = JSON.parse(localStorage.getItem(LS_WORKSPACE)) || [];
+  if(!Array.isArray(workspace)) workspace = [];
+  let viewMode = localStorage.getItem(LS_VIEW) || 'grid';
+  let filterTag = null;
+  let clipboardTargetId = null;
+  let activeSessionId = localStorage.getItem(LS_ACTIVE_SESSION) || null;
+  let currentTab = 'workspace';
+  let dirty = false;
 
+  function setDirty(val){
+    dirty = !!val;
+    const banner = $id('dirty-banner');
+    if(banner){
+      banner.style.display = dirty ? 'block' : 'none';
+    }
+  }
 
-    
-  </body>
+  function addDirtyBanner(){
+    const existing = $id('dirty-banner');
+    if(existing) return;
+    const banner = document.createElement('div');
+    banner.id = 'dirty-banner';
+    banner.style.cssText = 'background:#fee2e2;color:#991b1b;border:1px solid #ef4444;padding:8px 16px;font-size:13px;font-weight:700;display:flex;align-items:center;gap:10px;display:none';
+    banner.innerHTML = `<span>⚠ Kaydedilmemiş değişiklik var</span><button id="dirty-save" style="background:#ef4444;color:#fff;border:none;padding:4px 10px;border-radius:4px;cursor:pointer;font-size:12px">Kaydet</button>`;
+    document.body.insertBefore(banner, document.body.firstChild);
+    $id('dirty-save').addEventListener('click', ()=>{
+      if(activeSessionId){
+        const s = findSession(activeSessionId);
+        if(s){
+          s.links = [...workspace];
+          s.created = Date.now();
+          save();
+          setDirty(false);
+          renderStickyLeftBar();
+          renderSessionSelect();
+          const old = document.title;
+          document.title = 'Kaydedildi: ' + s.name;
+          setTimeout(()=>document.title = old, 1200);
+        }
+      } else {
+        alert('Lütfen önce sol panelden bir oturum seçin veya oluşturun.');
+      }
+    });
+  }
+
+  let _tagsCache = null;
+  let _tagCountCache = null;
+
+  function invalidateTagCache(){
+    _tagsCache = null;
+    _tagCountCache = null;
+  }
+
+  function allTags(){
+    if(_tagsCache) return _tagsCache;
+    const set = new Set();
+    links.forEach(l=>{ (l.tags||[]).forEach(t=>set.add(t)); });
+    workspace.forEach(w=>{ (w.tags||[]).forEach(t=>set.add(t)); });
+    _tagsCache = [...set].sort();
+    return _tagsCache;
+  }
+
+  function tagCount(tag){
+    if(!_tagCountCache) _tagCountCache = {};
+    if(_tagCountCache[tag] !== undefined) return _tagCountCache[tag];
+    const ids = new Set();
+    links.forEach(l=>{ if((l.tags||[]).includes(tag)) ids.add(l.id); });
+    workspace.forEach(w=>{ if((w.tags||[]).includes(tag)) ids.add(w.id); });
+    _tagCountCache[tag] = ids.size;
+    return ids.size;
+  }
+
+  function save(){
+    try {
+      localStorage.setItem(LS_LINKS, JSON.stringify(links));
+      localStorage.setItem(LS_SESSIONS, JSON.stringify(sessions));
+      localStorage.setItem(LS_WORKSPACE, JSON.stringify(workspace));
+      localStorage.setItem(LS_VIEW, viewMode);
+      if(activeSessionId) localStorage.setItem(LS_ACTIVE_SESSION, activeSessionId);
+      else localStorage.removeItem(LS_ACTIVE_SESSION);
+    } catch(e){ console.error('save error', e); }
+    invalidateTagCache();
+  }
+
+  function findLink(id){ return links.find(l => l.id === id); }
+  function findSession(id){ return sessions.find(s => s.id === id); }
+
+  function isYoutube(url){
+    return url.includes('youtube.com') || url.includes('youtu.be') || url.includes('youtube-nocookie.com');
+  }
+  function getYoutubeId(url){
+    try {
+      const u = new URL(url);
+      if(u.hostname.includes('youtu.be')) return u.pathname.slice(1);
+      if(u.hostname.includes('youtube.com')) return u.searchParams.get('v') || u.pathname.split('/').pop();
+    } catch(e){}
+    const m = url.match(/youtu\.be\/([^?&]+)/);
+    if(m) return m[1];
+    const m2 = url.match(/[?&]v=([^&]+)/);
+    if(m2) return m2[1];
+    return null;
+  }
+
+  function mediaHtml(link){
+    if(isYoutube(link.url)){
+      const vid = getYoutubeId(link.url);
+      if(vid) return `<img class="card-media-img" src="https://img.youtube.com/vi/${vid}/hqdefault.jpg" alt="${esc(link.name)}" loading="lazy">`;
+    }
+    return `<div class="card-fallback">${esc(link.name.charAt(0).toUpperCase())}</div>`;
+  }
+
+  function tagsHtml(link, clickable){
+    if(!link.tags || !link.tags.length) return '';
+    return link.tags.map(t=>`
+      <span class="tag-pill${clickable?' tag-clickable':''}" data-tag="${esc(t)}">${esc(t)}
+        ${clickable?'<span style="margin-left:4px;font-weight:800">×</span>':''}
+      </span>`).join('');
+  }
+
+  function updateFilterBadge(){
+    const cont = $id('filter-badge-container');
+    if(!cont) return;
+    if(filterTag){
+      cont.classList.remove('hidden');
+      cont.innerHTML = `<span class="filter-badge">${esc(filterTag)} <button class="remove-filter" data-action="cleartagfilter">×</button></span>`;
+    } else {
+      cont.classList.add('hidden');
+      cont.innerHTML = '';
+    }
+  }
+
+  function matchesFilter(item){
+    if(!filterTag) return true;
+    return (item.tags||[]).includes(filterTag);
+  }
+
+  function renderSessionSelect(){
+    const sel = $id('session-select');
+    if(!sel) return;
+    const cur = sel.value;
+    sel.innerHTML = '<option value="">Oturum Seç</option>';
+    sessions.forEach(s=>{
+      const opt = document.createElement('option');
+      opt.value = s.id;
+      opt.textContent = esc(s.name) + ' (' + s.links.length + ' bağlantı)';
+      if(s.id === activeSessionId) opt.selected = true;
+      sel.appendChild(opt);
+    });
+    if(cur && sessions.find(s=>s.id===cur)) sel.value = cur;
+  }
+
+  function renderStickyTagBar(){
+    const list = $id('sticky-tag-list');
+    if(!list) return;
+    list.innerHTML = '';
+    const tags = allTagsWithExtra();
+    if(tags.length===0){
+      list.innerHTML = '<div style="font-size:12px;color:#999;padding:8px">Henüz etiket yok.</div>';
+      return;
+    }
+    tags.forEach(t=>{
+      const div = document.createElement('div');
+      div.className = 'tag-item' + (filterTag === t ? ' active' : '');
+      div.innerHTML = `<span class="tag-name">${esc(t)}</span><span class="tag-count">${tagCount(t)}</span><button class="remove" data-action="removetag" data-tag="${esc(t)}">×</button>`;
+      div.querySelector('.tag-name').addEventListener('click', (ev)=>{
+        ev.stopPropagation();
+        if(filterTag === t) filterTag = null;
+        else filterTag = t;
+        save();
+        currentTab = 'links';
+        showTab('links');
+        div.classList.add('clicked');
+        setTimeout(()=>div.classList.remove('clicked'), 150);
+      });
+      div.querySelector('.remove').addEventListener('click', e=>{
+        e.stopPropagation();
+        const tag = div.querySelector('.tag-name').textContent;
+        if(!confirm('"' + esc(tag) + '" etiketini tüm bağlantılardan kaldırmak istediğinize emin misiniz?')) return;
+        links.forEach(l=>{ l.tags = (l.tags||[]).filter(x=>x!==tag); });
+        workspace.forEach(w=>{ w.tags = (w.tags||[]).filter(x=>x!==tag); });
+        sessions.forEach(s=>{ s.links.forEach(l=>{ l.tags = (l.tags||[]).filter(x=>x!==tag); }); });
+        if(filterTag === tag) filterTag = null;
+        save();
+        renderWorkspace();
+        renderLinks();
+        renderStickyTagBar();
+        renderSessionSelect();
+      });
+      list.appendChild(div);
+    });
+
+    const newTagInput = $id('sticky-new-tag');
+    const addBtn = $id('sticky-add-tag');
+    if(addBtn){
+      addBtn.onclick = ()=>{
+        const t = newTagInput.value.trim();
+        if(!t) return;
+        if(!allTagsWithExtra().includes(t)){
+          if(!window.__extraTags) window.__extraTags = new Set();
+          window.__extraTags.add(t);
+        }
+        newTagInput.value = '';
+        save();
+        renderStickyTagBar();
+      };
+    }
+  }
+
+  function allTagsWithExtra(){
+    const set = new Set(allTags());
+    if(window.__extraTags) window.__extraTags.forEach(t=>set.add(t));
+    return [...set].sort();
+  }
+
+  function renderStickyLeftBar(){
+    const list = $id('sticky-left-list');
+    if(!list) return;
+    list.innerHTML = '';
+
+    const note = document.createElement('div');
+    note.style.cssText = 'font-size:11px;color:#94a3b8;margin-bottom:10px;font-weight:600';
+    note.textContent = 'Oturumlar';
+    list.appendChild(note);
+
+    if(sessions.length===0){
+      list.innerHTML += '<div style="font-size:12px;color:#999;padding:8px">Henüz oturum yok.</div>';
+    }
+    sessions.forEach(s=>{
+      const div = document.createElement('div');
+      div.className = 'left-item' + (activeSessionId === s.id ? ' active' : '');
+      div.innerHTML = `<span class="name">${esc(s.name)}</span><span class="count">${s.links.length}</span><span class="save-icon" title="Oturumu kaydet">💾</span><button class="remove" data-action="clearsession" data-id="${esc(s.id)}">×</button>`;
+      div.querySelector('.name').addEventListener('click', (ev)=>{
+        ev.stopPropagation();
+        activeSessionId = s.id;
+        workspace = [...s.links];
+        save();
+        renderWorkspace();
+        renderLinks();
+        renderStickyTagBar();
+        renderStickyLeftBar();
+        renderSessionSelect();
+        showTab('workspace');
+      });
+      div.querySelector('.save-icon').addEventListener('click', (ev)=>{
+        ev.stopPropagation();
+        const idx = sessions.findIndex(x => x.id === s.id);
+        if(idx>=0){
+          sessions[idx].links = [...workspace];
+          sessions[idx].created = Date.now();
+          save();
+          setDirty(false);
+          renderStickyLeftBar();
+          renderSessionSelect();
+          const old = document.title;
+          document.title = 'Oturum kaydedildi: ' + s.name;
+          setTimeout(()=>document.title = old, 1200);
+        }
+      });
+      div.querySelector('.remove').addEventListener('click', e=>{
+        e.stopPropagation();
+        const id = e.target.closest('.remove').getAttribute('data-id');
+        if(!confirm('"' + esc(s.name) + '" oturumunu silmek istediğinize emin misiniz?')) return;
+        sessions = sessions.filter(x => x.id !== id);
+        if(activeSessionId === id) activeSessionId = null;
+        save();
+        renderSessions();
+        renderSessionSelect();
+        renderStickyLeftBar();
+        renderWorkspace();
+      });
+      list.appendChild(div);
+    });
+
+    const addDiv = document.createElement('div');
+    addDiv.style.cssText = 'margin-top:14px;padding-top:10px;border-top:1px solid #eee';
+    addDiv.innerHTML = `
+      <div style="font-size:11px;color:#94a3b8;margin-bottom:6px;font-weight:600">Yeni Oturum</div>
+      <input id="left-new-session" placeholder="Oturum adı" style="width:100%;padding:6px 8px;border:1px solid #ccc;border-radius:6px;font-size:12px;margin-bottom:6px">
+      <button id="left-add-session" style="width:100%;padding:6px;background:#2563eb;color:#fff;border:none;border-radius:6px;font-size:12px;font-weight:700;cursor:pointer">Oluştur</button>`;
+    list.appendChild(addDiv);
+
+    const inp = $id('left-new-session');
+    const btn = $id('left-add-session');
+    if(btn){
+      btn.onclick = ()=>{
+        const name = inp.value.trim();
+        if(!name) return;
+        sessions.push({ id: uid(), name, links: [...workspace], created: Date.now() });
+        inp.value = '';
+        save();
+        setDirty(false);
+        renderSessions();
+        renderSessionSelect();
+        renderStickyLeftBar();
+        showTab('workspace');
+      };
+    }
+    if(inp){
+      inp.addEventListener('keydown', e=>{
+        if(e.key === 'Enter'){ e.preventDefault(); btn.onclick(); }
+      });
+    }
+  }
+
+  /* ---------- render workspace ---------- */
+  let hoveredCardId = null;
+  let hoveredLinkId = null;
+
+  function renderWorkspace(){
+    const workspaceEl = $id('tab-workspace');
+    const cards = $id('cards');
+    const empty = $id('workspace-empty');
+    if(!workspaceEl || !cards || !empty) return;
+
+    workspaceEl.className = 'workspace';
+    if(viewMode) workspaceEl.classList.add('view-' + viewMode);
+
+    const filtered = workspace.filter(matchesFilter);
+    if(filtered.length===0){
+      empty.style.display='block';
+      cards.style.display='none';
+    } else {
+      empty.style.display='none';
+      cards.style.display='block';
+    }
+    cards.innerHTML='';
+    filtered.forEach((item, idx)=>{
+      const card = document.createElement('div');
+      card.className='card';
+      card.setAttribute('data-id', item.id);
+      card.draggable = true;
+      card.innerHTML = `
+        <div class="card-index">${idx+1}</div>
+        <div class="card-media">${mediaHtml(item)}</div>
+        <div class="card-info">
+          <div class="card-title">${esc(item.name)}</div>
+          <div class="card-url">${esc(item.url)}</div>
+        </div>
+        <div class="card-tags">${tagsHtml(item, true)}</div>
+        <div class="card-actions">
+          <button class="icon-btn" data-action="newtab" data-id="${esc(item.id)}" title="Yeni Sekmede Aç">↗</button>
+          <button class="icon-btn remove" data-action="remove" data-id="${esc(item.id)}" title="Kaldır">×</button>
+        </div>`;
+
+      card.addEventListener('mouseenter', ()=>{ hoveredCardId = item.id; clipboardTargetId = item.id; });
+      card.addEventListener('mouseleave', ()=>{ if(hoveredCardId===item.id) hoveredCardId=null; });
+
+      card.addEventListener('dragstart', e=>{
+        card.classList.add('dragging');
+        e.dataTransfer.effectAllowed = 'move';
+        e.dataTransfer.setData('text/plain', 'workspace:'+item.id);
+      });
+      card.addEventListener('dragend', e=>{
+        card.classList.remove('dragging');
+        cards.querySelectorAll('.card').forEach(c=>c.classList.remove('drag-over'));
+        persistOrder();
+      });
+
+      cards.appendChild(card);
+    });
+    initCardDragOver(cards);
+    updateFilterBadge();
+    renderSessionSelect();
+  }
+
+  function initCardDragOver(container){
+    container.addEventListener('dragover', e=>{
+      e.preventDefault();
+      e.dataTransfer.dropEffect = 'move';
+      const after = getDragAfterElement(container, e.clientY);
+      const dragging = document.querySelector('.dragging');
+      if(!dragging) return;
+      if(after == null) container.appendChild(dragging);
+      else container.insertBefore(dragging, after);
+    });
+    container.addEventListener('drop', e=>{
+      e.preventDefault();
+      const data = e.dataTransfer.getData('text/plain');
+      if(data && (data.startsWith('search:') || data.startsWith('link:'))){
+        const id = data.split(':')[1];
+        const l = findLink(id);
+        if(l && !workspace.some(w=>w.id===l.id)){
+          workspace.push(l);
+          save();
+          renderWorkspace();
+        }
+      } else {
+        container.querySelectorAll('.card').forEach(c=>c.classList.remove('drag-over'));
+        persistOrder();
+      }
+    });
+  }
+
+  function getDragAfterElement(container, y){
+    const draggableElements = [...container.querySelectorAll('.card:not(.dragging)')];
+    return draggableElements.reduce((closest, child)=>{
+      const box = child.getBoundingClientRect();
+      const offset = y - box.top - box.height / 2;
+      if(offset < 0 && offset > closest.offset) return { offset: offset, element: child };
+      return closest;
+    }, { offset: Number.NEGATIVE_INFINITY }).element;
+  }
+
+  function persistOrder(){
+    const ids = [...$id('cards').querySelectorAll('.card')].map(c=>c.getAttribute('data-id'));
+    const map = {};
+    workspace.forEach(w=>map[w.id]=w);
+    const ordered = ids.map(id=>map[id]).filter(Boolean);
+    const rest = workspace.filter(w=>!ids.includes(w.id));
+    workspace = [...ordered, ...rest];
+    save();
+    setDirty(true);
+    renderWorkspace();
+  }
+
+  /* ---------- card click / action ---------- */
+  $id('cards').addEventListener('click', function(e){
+    const btn = e.target.closest('[data-action]');
+    if(btn){
+      const id = btn.getAttribute('data-id');
+      if(btn.getAttribute('data-action')==='newtab'){
+        const l = findLink(id);
+        if(l) window.open(l.url, '_blank');
+      } else if(btn.getAttribute('data-action')==='remove'){
+        if(!confirm('Bu bağlantıyı boş sayfadan kaldırmak istediğinize emin misiniz?')) return;
+        workspace = workspace.filter(w => w.id !== id);
+        save();
+        setDirty(true);
+        renderWorkspace();
+      }
+      return;
+    }
+    const tag = e.target.closest('.tag-pill');
+    if(tag){
+      const t = tag.getAttribute('data-tag');
+      if(t){
+        if(filterTag === t) filterTag = null;
+        else filterTag = t;
+        renderWorkspace();
+      }
+      return;
+    }
+    const card = e.target.closest('.card');
+    if(card){
+      const id = card.getAttribute('data-id');
+      const l = findLink(id);
+      if(l){
+        if(e.ctrlKey){
+          window.open(l.url, '_blank');
+        } else {
+          openLinkEditor(l);
+        }
+      }
+    }
+  });
+
+  /* ---------- open all ---------- */
+  const openAllBtn = $id('open-all');
+  if(openAllBtn) openAllBtn.addEventListener('click', ()=>{
+    const filtered = workspace.filter(matchesFilter);
+    if(filtered.length===0) return;
+    if(!confirm(filtered.length + ' bağlantıyı yeni sekmelerde açmak istediğinize emin misiniz?')) return;
+    filtered.forEach(w=>window.open(w.url, '_blank'));
+  });
+
+  const clearBtn = $id('clear-workspace');
+  if(clearBtn) clearBtn.addEventListener('click', ()=>{
+    if(workspace.length===0) return;
+    if(confirm('Boş sayfadaki tüm bağlantıları kaldırmak istediğinize emin misiniz?')){
+      workspace = [];
+      save();
+      setDirty(true);
+      renderWorkspace();
+    }
+  });
+
+  const saveNewSessionBtn = $id('save-new-session');
+  if(saveNewSessionBtn) saveNewSessionBtn.addEventListener('click', ()=>{
+    if(workspace.length===0) return alert('Kaydedilecek bağlantı yok.');
+    const name = prompt('Yeni oturum adı:');
+    if(!name) return;
+    sessions.push({ id: uid(), name, links: [...workspace], created: Date.now() });
+    save();
+    renderSessions();
+    renderSessionSelect();
+    const old = document.title;
+    document.title = 'Oturum kaydedildi: ' + name;
+    setTimeout(()=>document.title = old, 1200);
+  });
+
+  /* ---------- session select change ---------- */
+  const sessionSelect = $id('session-select');
+  if(sessionSelect){
+    sessionSelect.addEventListener('change', e=>{
+      const val = e.target.value;
+      if(!val){
+        activeSessionId = null;
+        save();
+        renderWorkspace();
+        renderSessionSelect();
+        return;
+      }
+      const s = findSession(val);
+      if(s){
+        activeSessionId = s.id;
+        workspace = [...s.links];
+        save();
+        renderWorkspace();
+        renderSessionSelect();
+      }
+    });
+  }
+
+  /* ---------- number shortcuts ---------- */
+  window.addEventListener('keydown', e=>{
+    if(e.target.matches('input,textarea,select')) return;
+    if(e.key.toLowerCase() === 'a' && hoveredCardId){
+      e.preventDefault();
+      const l = findLink(hoveredCardId);
+      if(l) window.open(l.url, '_blank');
+    }
+    if(e.shiftKey && e.key.toLowerCase() === 'x'){
+      e.preventDefault();
+      if(currentTab === 'workspace' && hoveredCardId){
+        workspace = workspace.filter(w => w.id !== hoveredCardId);
+        save();
+        renderWorkspace();
+        hoveredCardId = null;
+        return;
+      }
+      if(currentTab === 'links' && hoveredLinkId){
+        links = links.filter(l => l.id !== hoveredLinkId);
+        save();
+        renderLinks();
+        renderWorkspace();
+        hoveredLinkId = null;
+      }
+    }
+    if(e.ctrlKey && e.key.toLowerCase() === 'c'){
+      e.preventDefault();
+      const id = clipboardTargetId || hoveredCardId;
+      const l = id ? findLink(id) : null;
+      if(l){
+        navigator.clipboard.writeText(l.url).then(()=>{
+          const old = document.title;
+          document.title = 'Kopyalandı: ' + l.name;
+          setTimeout(()=>document.title = old, 1200);
+        });
+      }
+    }
+    if(e.ctrlKey && e.key.toLowerCase() === 'v'){
+      e.preventDefault();
+      navigator.clipboard.readText().then(text=>{
+        const url = text.trim();
+        if(!url) return;
+        try { new URL(url); } catch(err){ return alert('Geçersiz URL'); }
+        if(links.some(l=>l.url===url) || workspace.some(w=>w.url===url)){
+          return alert('Bu link zaten kayıtlı.');
+        }
+        const tags = isYoutube(url) ? ['YouTube'] : [];
+        links.unshift({ id: uid(), name: url, url, category: 'Diğer', tags, added: Date.now() });
+        save();
+        renderLinks();
+        renderWorkspace();
+      });
+    }
+  });
+
+  /* ---------- search ---------- */
+  const searchOverlay = $id('search-overlay');
+  const searchInput = $id('search-input');
+  const searchResults = $id('search-results');
+  const searchCount = $id('search-count');
+  let selectedIndex = -1;
+  let filteredLinks = [];
+
+  function openSearch(){
+    if(!searchOverlay) return;
+    searchOverlay.classList.remove('hidden');
+    if(searchInput){ searchInput.value=''; searchInput.focus(); }
+    renderSearch('');
+  }
+  function closeSearch(){
+    if(searchOverlay) searchOverlay.classList.add('hidden');
+    selectedIndex = -1;
+  }
+
+  function renderSearch(query){
+    if(!searchResults || !searchCount) return;
+    const q = query.toLowerCase().trim();
+    filteredLinks = links.filter(l =>
+      l.name.toLowerCase().includes(q) ||
+      l.url.toLowerCase().includes(q) ||
+      l.category.toLowerCase().includes(q) ||
+      (l.tags && l.tags.some(t=>t.toLowerCase().includes(q)))
+    );
+    searchCount.textContent = filteredLinks.length + ' bağlantı bulundu';
+    searchResults.innerHTML = '';
+    selectedIndex = -1;
+
+    if(filteredLinks.length===0 && q){
+      const li = document.createElement('li');
+      li.className = 'search-result empty';
+      li.innerHTML = `
+        <div class="sr-left">
+          <div class="sr-avatar">?</div>
+          <div class="sr-text">
+            <div class="sr-name">Sonuç bulunamadı: "${esc(q)}"</div>
+            <div class="sr-meta" style="color:#2563eb;cursor:pointer">Yeni bağlantı olarak kaydet</div>
+          </div>
+        </div>
+        <div class="sr-hint">Enter</div>`;
+      li.addEventListener('click', ()=>{
+        closeSearch();
+        saveNewLinkFromSearch(q);
+      });
+      searchResults.appendChild(li);
+      return;
+    }
+
+    filteredLinks.slice(0,60).forEach((link, i)=>{
+      const li = document.createElement('li');
+      li.className = 'search-result';
+      li.setAttribute('data-id', link.id);
+      li.draggable = true;
+      const addToSessionBtn = activeSessionId ? `<button class="btn-ghost btn-sm" data-action="addtosession" data-id="${esc(link.id)}">Oturuma Ekle</button>` : '';
+      li.innerHTML = `
+        <div class="sr-left">
+          <div class="sr-avatar">${esc(link.name.charAt(0).toUpperCase())}</div>
+          <div class="sr-text">
+            <div class="sr-name">${esc(link.name)}</div>
+            <div class="sr-meta">${esc(link.category)} · ${esc(link.url)}</div>
+          </div>
+        </div>
+        <div class="sr-hint">Shift+G</div>
+        ${addToSessionBtn}`;
+      li.addEventListener('click', (ev)=>{
+        if(ev.target.closest('[data-action="addtosession"]')){
+          ev.stopPropagation();
+          const id = ev.target.closest('[data-action="addtosession"]').getAttribute('data-id');
+          const lnk = findLink(id);
+          if(currentTab === 'workspace'){
+            openLinkInWorkspace(lnk);
+            closeSearch();
+          } else {
+            openSessionPickerForLink(lnk);
+            closeSearch();
+          }
+          return;
+        }
+        openLinkInWorkspace(link);
+        closeSearch();
+      });
+      li.addEventListener('mouseenter', () => { selectedIndex = i; highlight(); });
+      searchResults.appendChild(li);
+    });
+    highlight();
+  }
+
+  function addToActiveSession(link){
+    if(!activeSessionId) return;
+    const s = findSession(activeSessionId);
+    if(!s) return;
+    if(s.links.some(l=>l.id===link.id)){
+      const old = document.title;
+      document.title = 'Zaten oturumda: ' + link.name;
+      setTimeout(()=>document.title = old, 1200);
+      return;
+    }
+    s.links.push(link);
+    save();
+    renderSessions();
+    renderSessionSelect();
+    const old = document.title;
+    document.title = 'Oturuma eklendi: ' + link.name;
+    setTimeout(()=>document.title = old, 1200);
+  }
+
+  /* ---------- session picker for links tab ---------- */
+  function openSessionPickerForLink(link){
+    if(sessions.length===0){
+      alert('Henüz oturum yok. Önce bir oturum oluşturun.');
+      return;
+    }
+    const html = `
+      <h3>Linki hangi oturuma eklemek istiyorsunuz?</h3>
+      <form id="session-picker-form">
+        <label>Oturum seçin</label>
+        <select name="sessionId" style="width:100%;padding:8px;border:1px solid #ccc;border-radius:6px;margin-bottom:10px;">
+          <option value="">Oturum Seç</option>
+          ${sessions.map(s=>`<option value="${esc(s.id)}">${esc(s.name)} (${s.links.length} bağlantı)</option>`).join('')}
+        </select>
+        <div class="actions">
+          <button class="btn" type="submit">Ekle</button>
+          <button class="btn-ghost" type="button" id="session-picker-cancel">İptal</button>
+        </div>
+      </form>`;
+    openModal(html, ()=>{
+      const form = $id('session-picker-form');
+      const cancel = $id('session-picker-cancel');
+      if(form){
+        form.addEventListener('submit', e=>{
+          e.preventDefault();
+          const fd = new FormData(form);
+          const sid = fd.get('sessionId');
+          if(!sid) return alert('Lütfen bir oturum seçin');
+          const s = findSession(sid);
+          if(s){
+            if(s.links.some(l=>l.id===link.id)){
+              alert('Bu link zaten bu oturumda.');
+            } else {
+              s.links.push(link);
+              save();
+              renderSessions();
+              renderSessionSelect();
+              const old = document.title;
+              document.title = 'Oturuma eklendi: ' + link.name;
+              setTimeout(()=>document.title = old, 1200);
+            }
+          }
+          closeModal();
+        });
+      }
+      if(cancel) cancel.addEventListener('click', closeModal);
+    });
+  }
+
+  function highlight(){
+    if(!searchResults) return;
+    [...searchResults.children].forEach((li, i)=>{
+      li.classList.toggle('highlight', i === selectedIndex);
+    });
+    const active = searchResults.children[selectedIndex];
+    if(active) active.scrollIntoView({ block: 'nearest' });
+  }
+
+  function openLinkInWorkspace(link){
+    if(!workspace.some(w => w.id === link.id)){
+      workspace.push(link);
+      save();
+      setDirty(true);
+      renderWorkspace();
+    }
+  }
+
+  function saveNewLinkFromSearch(query){
+    const urlMatch = query.match(/https?:\/\/[^\s]+/);
+    let url = urlMatch ? urlMatch[0] : null;
+    let name = query;
+    if(!url){
+      url = 'https://' + query.toLowerCase().replace(/[^a-z0-9]+/g,'') + '.com';
+    } else {
+      name = query;
+    }
+    if(links.some(l=>l.url===url) || workspace.some(w=>w.url===url)){
+      return alert('Bu link zaten kayıtlı.');
+    }
+    const tags = isYoutube(url) ? ['YouTube'] : [];
+    links.unshift({ id: uid(), name: name, url, category: 'Diğer', tags, added: Date.now() });
+    save();
+    renderLinks();
+    renderWorkspace();
+    renderStickyTagBar();
+    alert('Kaydedildi: ' + name);
+  }
+
+  if(searchInput){
+    let _searchDebounce;
+    searchInput.addEventListener('input', e=>{
+      clearTimeout(_searchDebounce);
+      _searchDebounce = setTimeout(()=>renderSearch(e.target.value), 120);
+    });
+    searchInput.addEventListener('keydown', e=>{
+      const max = Math.max(filteredLinks.length > 0 ? Math.min(60, filteredLinks.length) - 1 : -1, -1);
+      if(e.key === 'ArrowDown'){ e.preventDefault(); selectedIndex = Math.min(selectedIndex + 1, max); highlight(); }
+      else if(e.key === 'ArrowUp'){ e.preventDefault(); selectedIndex = Math.max(selectedIndex - 1, -1); highlight(); }
+      else if(e.key === 'Enter'){ e.preventDefault(); const li = searchResults.children[selectedIndex]; if(li){ openLinkInWorkspace(findLink(li.getAttribute('data-id'))); closeSearch(); } }
+      else if(e.key === 'Escape'){ closeSearch(); }
+    });
+  }
+
+  /* ---------- sessions popup (O key) ---------- */
+  const sessionsPopup = document.createElement('div');
+  sessionsPopup.id = 'sessions-popup';
+  sessionsPopup.className = 'modal hidden';
+  sessionsPopup.innerHTML = `
+    <div class="modal-content" style="max-width: 700px;">
+      <button class="modal-close" id="sessions-popup-close">×</button>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;">
+        <h3 style="margin:0">Oturumlar (O tuşu)</h3>
+        <span class="sub" style="font-size:12px">localStorage'da saklanır</span>
+      </div>
+      <div id="sessions-popup-list"></div>
+      <div style="margin-top:16px; display:flex; gap:8px;">
+        <button class="btn btn-sm btn-ghost" id="sessions-popup-close-btn">Kapat</button>
+      </div>
+    </div>`;
+  document.body.appendChild(sessionsPopup);
+
+  const spClose = $id('sessions-popup-close');
+  const spCloseBtn = $id('sessions-popup-close-btn');
+  const spList = $id('sessions-popup-list');
+
+  function renderSessionsPopup(){
+    if(!spList) return;
+    spList.innerHTML = '';
+    if(sessions.length===0){
+      spList.innerHTML = '<div style="padding:24px;text-align:center;color:#888">Henüz oturum yok.</div>';
+      return;
+    }
+    sessions.forEach(s=>{
+      const item = document.createElement('div');
+      item.className = 'session-item';
+      item.innerHTML = `
+        <div>
+          <div class="name">${esc(s.name)}</div>
+          <div class="meta">${s.links.length} bağlantı · ${new Date(s.created).toLocaleString('tr-TR')}</div>
+        </div>
+        <div class="btns">
+          <button class="btn btn-sm" data-action="loadsession" data-id="${esc(s.id)}">Oturumu Aç</button>
+          <button class="btn-ghost btn-sm" data-action="editsession" data-id="${esc(s.id)}">Düzenle</button>
+          <button class="btn-ghost btn-sm btn-danger" data-action="deletesession" data-id="${esc(s.id)}">Sil</button>
+        </div>`;
+      spList.appendChild(item);
+    });
+  }
+
+  function openSessionsPopup(){
+    renderSessionsPopup();
+    sessionsPopup.classList.remove('hidden');
+  }
+  function closeSessionsPopup(){
+    sessionsPopup.classList.add('hidden');
+  }
+
+  spList.addEventListener('click', e=>{
+    const btn = e.target.closest('[data-action]');
+    if(!btn) return;
+    const id = btn.getAttribute('data-id');
+    const action = btn.getAttribute('data-action');
+    if(action === 'loadsession'){
+      const s = findSession(id);
+      if(s){
+        activeSessionId = s.id;
+        workspace = [...s.links];
+        save();
+        setDirty(false);
+        renderWorkspace();
+        renderSessionSelect();
+        closeSessionsPopup();
+        showTab('workspace');
+      }
+    } else if(action === 'editsession'){
+      closeSessionsPopup();
+      openSessionEditor(findSession(id));
+    } else if(action === 'deletesession'){
+      if(confirm('Bu oturumu silmek istediğinize emin misiniz?')){
+        sessions = sessions.filter(s => s.id !== id);
+        save();
+        renderSessionsPopup();
+      }
+    }
+  });
+
+  if(spClose) spClose.addEventListener('click', closeSessionsPopup);
+  if(spCloseBtn) spCloseBtn.addEventListener('click', closeSessionsPopup);
+  sessionsPopup.addEventListener('click', e=>{ if(e.target === sessionsPopup) closeSessionsPopup(); });
+
+  /* ---------- global keys ---------- */
+  window.addEventListener('keydown', e=>{
+    if(e.target.matches('input,textarea,select')) return;
+    if(e.key.toLowerCase() === 'f'){ e.preventDefault(); openSearch(); }
+    if(e.key.toLowerCase() === 'o'){
+      e.preventDefault();
+      if(sessionsPopup.classList.contains('hidden')) openSessionsPopup();
+      else closeSessionsPopup();
+    }
+    if(e.shiftKey && e.key.toLowerCase() === 'g'){
+      const li = searchResults ? searchResults.children[selectedIndex] : null;
+      if(li && searchOverlay && !searchOverlay.classList.contains('hidden')){
+        openLinkInWorkspace(findLink(li.getAttribute('data-id')));
+      }
+    }
+    if(e.key === 'Escape'){
+      closeSearch();
+      closeSessionsPopup();
+      const modal = $id('modal');
+      if(modal && !modal.classList.contains('hidden')) closeModal();
+    }
+  });
+
+  /* ---------- links tab ---------- */
+  function renderLinks(){
+    const list = $id('links-list');
+    if(!list) return;
+    list.innerHTML = '';
+    const filtered = links.filter(matchesFilter);
+    filtered.forEach(link=>{
+      const row = document.createElement('div');
+      row.className = 'link-row';
+      row.setAttribute('data-id', link.id);
+      row.draggable = true;
+      row.innerHTML = `
+        <div class="lr-cell">${esc(link.name)}</div>
+        <div class="lr-cell lr-url">${esc(link.url)}</div>
+        <div class="lr-cell lr-cat">${esc(link.category)}</div>
+        <div class="lr-cell lr-act">
+          ${tagsHtml(link, true)}
+          <button class="btn-ghost btn-sm" data-action="editlink" data-id="${esc(link.id)}">Düzenle</button>
+          <button class="btn-ghost btn-sm btn-danger" data-action="deletelink" data-id="${esc(link.id)}">Sil</button>
+        </div>`;
+      list.appendChild(row);
+    });
+    initLinkRowDrag();
+    updateFilterBadge();
+  }
+
+  function initLinkRowDrag(){
+    $id('links-list').querySelectorAll('.link-row').forEach(row=>{
+      row.addEventListener('dragstart', e=>{
+        row.classList.add('dragging');
+        e.dataTransfer.setData('text/plain', 'link:'+row.getAttribute('data-id'));
+      });
+      row.addEventListener('dragend', e=>{
+        row.classList.remove('dragging');
+      });
+    });
+  }
+
+  $id('links-list').addEventListener('mouseover', e=>{
+    const row = e.target.closest('.link-row');
+    if(row) hoveredLinkId = row.getAttribute('data-id');
+  });
+  $id('links-list').addEventListener('mouseout', e=>{
+    const toRow = e.relatedTarget ? e.relatedTarget.closest('.link-row') : null;
+    if(!toRow) hoveredLinkId = null;
+  });
+  $id('links-list').addEventListener('click', e=>{
+    const btn = e.target.closest('[data-action]');
+    if(btn){
+      const id = btn.getAttribute('data-id');
+      if(btn.getAttribute('data-action') === 'editlink'){
+        openLinkEditor(findLink(id));
+      } else if(btn.getAttribute('data-action') === 'deletelink'){
+        if(confirm('Bu bağlantıyı silmek istediğinize emin misiniz?')){
+          links = links.filter(l => l.id !== id);
+          save();
+          renderLinks();
+          renderWorkspace();
+        }
+      }
+      return;
+    }
+    const tag = e.target.closest('.tag-pill');
+    if(tag){
+      const t = tag.getAttribute('data-tag');
+      if(t){
+        if(filterTag === t) filterTag = null;
+        else filterTag = t;
+        save();
+        renderWorkspace();
+        renderLinks();
+        renderStickyTagBar();
+      }
+      return;
+    }
+    const row = e.target.closest('.link-row');
+    if(row){
+      const id = row.getAttribute('data-id');
+      const l = findLink(id);
+      if(l){
+        if(e.ctrlKey){
+          window.open(l.url, '_blank');
+        } else {
+          openLinkEditor(l);
+        }
+      }
+    }
+  });
+
+  const addLinkBtn = $id('add-link');
+  if(addLinkBtn) addLinkBtn.addEventListener('click', () => openLinkEditor(null));
+
+  function openLinkEditor(link){
+    const isNew = !link;
+    const data = link || { id: uid(), name: '', url: '', category: 'SAAS', tags: [], added: Date.now() };
+    const tagList = allTagsWithExtra();
+    const suggestionsHtml = tagList.map(t=>`<div class="tag-suggestion" data-tag="${esc(t)}">${esc(t)}</div>`).join('');
+    const html = `
+      <h3>${isNew ? 'Yeni Bağlantı' : 'Bağlantıyı Düzenle'}</h3>
+      <form id="link-form">
+        <label>Ad</label><input name="name" value="${esc(data.name)}" required>
+        <label>URL</label><input name="url" value="${esc(data.url)}" placeholder="https://" required>
+        <label>Kategori</label><select name="category">
+          ${CATEGORIES.map(c => `<option ${c === data.category ? 'selected' : ''}>${esc(c)}</option>`).join('')}
+        </select>
+        <label>Etiketler (virgülle ayırın)</label>
+        <div style="position:relative;">
+          <input name="tags" id="edit-tags" value="${esc((data.tags||[]).join(', '))}" placeholder="YouTube, SAAS, CRM">
+          <div class="tag-suggestions hidden" id="tag-sugg">${suggestionsHtml}</div>
+        </div>
+        <div class="actions">
+          <button class="btn" type="submit">${isNew ? 'Ekle' : 'Kaydet'}</button>
+          <button class="btn-ghost" type="button" id="link-cancel">İptal</button>
+          ${!isNew ? `<button class="btn btn-danger" data-action="deletemodal" data-id="${esc(data.id)}">Sil</button>` : ''}
+        </div>
+      </form>`;
+    openModal(html, ()=>{
+      const form = $id('link-form');
+      const tagInput = $id('edit-tags');
+      const suggBox = $id('tag-sugg');
+      if(tagInput){
+        tagInput.addEventListener('focus', ()=>{
+          suggBox.classList.remove('hidden');
+        });
+        tagInput.addEventListener('input', ()=>{
+          const val = tagInput.value.toLowerCase();
+          suggBox.querySelectorAll('.tag-suggestion').forEach(el=>{
+            el.style.display = el.getAttribute('data-tag').toLowerCase().includes(val) ? '' : 'none';
+          });
+        });
+        tagInput.addEventListener('keydown', e=>{
+          if(e.key === 'Enter'){
+            e.preventDefault();
+            const t = tagInput.value.trim();
+            if(t){
+              const cur = tagInput.value.split(',').map(x=>x.trim()).filter(Boolean);
+              if(!cur.includes(t)){
+                tagInput.value = cur.length ? cur.join(', ') + ', ' + t : t;
+              }
+            }
+            suggBox.classList.add('hidden');
+          }
+        });
+        tagInput.addEventListener('blur', ()=>{
+          setTimeout(()=>suggBox.classList.add('hidden'), 200);
+        });
+        suggBox.querySelectorAll('.tag-suggestion').forEach(el=>{
+          el.addEventListener('click', ()=>{
+            const t = el.getAttribute('data-tag');
+            const cur = tagInput.value.split(',').map(x=>x.trim()).filter(Boolean);
+            if(!cur.includes(t)){
+              tagInput.value = cur.length ? cur.join(', ') + ', ' + t : t;
+            }
+            suggBox.classList.add('hidden');
+            tagInput.focus();
+          });
+        });
+      }
+      if(form){
+        form.addEventListener('keydown', e=>{
+          if(e.key === 'Enter' && e.target.tagName !== 'TEXTAREA'){
+            e.preventDefault();
+            form.requestSubmit();
+          }
+        });
+        form.addEventListener('submit', e=>{
+          e.preventDefault();
+          const fd = new FormData(form);
+          const tagsRaw = String(fd.get('tags') || '');
+          const tags = tagsRaw.split(',').map(t=>t.trim()).filter(Boolean);
+          let finalTags = tags;
+          if(isYoutube(fd.get('url')) && !finalTags.includes('YouTube')) finalTags.push('YouTube');
+          const entry = { name: fd.get('name'), url: fd.get('url'), category: fd.get('category'), tags: finalTags, added: Date.now() };
+          if(isNew) links.unshift({ id: uid(), ...entry });
+          else {
+            Object.assign(data, entry);
+            // workspace'deki aynı id'li linki güncelle
+            const wIdx = workspace.findIndex(w => w.id === data.id);
+            if(wIdx >= 0) {
+              workspace[wIdx] = { ...workspace[wIdx], name: data.name, url: data.url, category: data.category, tags: data.tags };
+            }
+            // tüm oturumlardaki aynı id'li linki güncelle
+            sessions.forEach(s => {
+              const sIdx = s.links.findIndex(l => l.id === data.id);
+              if(sIdx >= 0) {
+                s.links[sIdx] = { ...s.links[sIdx], name: data.name, url: data.url, category: data.category, tags: data.tags };
+              }
+            });
+          }
+          save();
+          renderLinks();
+          renderWorkspace();
+          renderStickyTagBar();
+          closeModal();
+        });
+      }
+      const cancel = $id('link-cancel');
+      if(cancel) cancel.addEventListener('click', closeModal);
+      const del = document.querySelector('[data-action="deletemodal"]');
+      if(del){
+        del.addEventListener('click', ()=>{
+          links = links.filter(l => l.id !== data.id);
+          save();
+          renderLinks();
+          renderWorkspace();
+          renderStickyTagBar();
+          closeModal();
+        });
+      }
+    });
+  }
+
+  /* ---------- sessions tab ---------- */
+  function renderSessions(){
+    const list = $id('sessions-list');
+    if(!list) return;
+    list.innerHTML = '';
+
+    const saveBar = document.createElement('div');
+    saveBar.className = 'session-item';
+    saveBar.innerHTML = `
+      <div style="display:flex;align-items:center;gap:10px">
+        <input id="new-session-name" placeholder="Oturum adı..." style="flex:1;padding:8px;border:1px solid #ccc;border-radius:6px;">
+        <button class="btn btn-sm" id="save-session">Kaydet</button>
+      </div>
+      <div class="meta" style="font-size:12px;color:#666;margin-top:4px">Şu anda açık olan bağlantıları bir oturum olarak kaydet</div>`;
+    list.appendChild(saveBar);
+
+    sessions.forEach(s=>{
+      const item = document.createElement('div');
+      item.className = 'session-item';
+      item.setAttribute('data-id', s.id);
+      item.draggable = true;
+      item.innerHTML = `
+        <div>
+          <div class="name">${esc(s.name)}</div>
+          <div class="meta">${s.links.length} bağlantı · ${new Date(s.created).toLocaleString('tr-TR')}</div>
+        </div>
+        <div class="btns">
+          <button class="btn btn-sm" data-action="loadsession" data-id="${esc(s.id)}">Oturumu Aç</button>
+          <button class="btn-ghost btn-sm" data-action="editsession" data-id="${esc(s.id)}">Düzenle</button>
+          <button class="btn-ghost btn-sm btn-danger" data-action="deletesession" data-id="${esc(s.id)}">Sil</button>
+        </div>`;
+      list.appendChild(item);
+    });
+    initSessionsOrderDrag(list);
+  }
+
+  function initSessionsOrderDrag(container){
+    container.addEventListener('dragover', e=>{
+      e.preventDefault();
+      e.dataTransfer.dropEffect = 'move';
+      const after = getDragAfterElement(container, e.clientY);
+      const dragging = document.querySelector('.session-item.dragging');
+      if(!dragging) return;
+      if(after == null) container.appendChild(dragging);
+      else container.insertBefore(dragging, after);
+    });
+    container.addEventListener('drop', e=>{
+      e.preventDefault();
+      container.querySelectorAll('.session-item').forEach(i=>i.classList.remove('dragging'));
+      persistSessionsOrder();
+    });
+    container.querySelectorAll('.session-item').forEach(item=>{
+      item.addEventListener('dragstart', e=>{
+        item.classList.add('dragging');
+        e.dataTransfer.effectAllowed = 'move';
+        e.dataTransfer.setData('text/plain', item.getAttribute('data-id'));
+      });
+      item.addEventListener('dragend', e=>{
+        item.classList.remove('dragging');
+        persistSessionsOrder();
+      });
+    });
+  }
+
+  function persistSessionsOrder(){
+    const items = [...$id('sessions-list').querySelectorAll('.session-item')];
+    const ids = items.map(i=>i.getAttribute('data-id'));
+    const map = {};
+    sessions.forEach(s=>map[s.id]=s);
+    sessions = ids.map(id=>map[id]).filter(Boolean);
+    save();
+    renderSessions();
+    renderSessionSelect();
+    renderStickyLeftBar();
+  }
+
+  $id('sessions-list').addEventListener('click', e=>{
+    const btn = e.target.closest('[data-action], #save-session');
+    if(!btn) return;
+    if(btn.id === 'save-session'){
+      const nameInput = $id('new-session-name');
+      const name = nameInput ? nameInput.value.trim() : '';
+      if(!name) return alert('Lütfen oturum adı girin');
+      sessions.push({ id: uid(), name, links: [...workspace], created: Date.now() });
+      if(nameInput) nameInput.value = '';
+      save();
+      setDirty(false);
+      renderSessions();
+      renderSessionSelect();
+    } else {
+      const id = btn.getAttribute('data-id');
+      const action = btn.getAttribute('data-action');
+      if(action === 'loadsession'){
+        const s = findSession(id);
+        if(s){
+          activeSessionId = s.id;
+          workspace = [...s.links];
+          save();
+          renderWorkspace();
+          renderSessionSelect();
+          showTab('workspace');
+        }
+      } else if(action === 'editsession'){
+        openSessionEditor(findSession(id));
+      } else if(action === 'deletesession'){
+        if(confirm('Bu oturumu silmek istediğinize emin misiniz?')){
+          sessions = sessions.filter(s => s.id !== id);
+          save();
+          renderSessions();
+          renderSessionSelect();
+        }
+      }
+    }
+  });
+
+  /* ---------- export / import ---------- */
+  function exportData(){
+    const payload = {
+      version: 1,
+      exportedAt: new Date().toISOString(),
+      links,
+      sessions,
+      workspace,
+      viewMode,
+      activeSessionId,
+      extraTags: window.__extraTags ? [...window.__extraTags] : []
+    };
+    const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'arcalar_yedek_' + new Date().toISOString().slice(0,10) + '.json';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    const old = document.title;
+    document.title = 'Yedekleme yapıldı';
+    setTimeout(()=>document.title = old, 1200);
+  }
+
+  function importData(file){
+    const reader = new FileReader();
+    reader.onload = e=>{
+      try {
+        const data = JSON.parse(e.target.result);
+        if(!data.links || !Array.isArray(data.links)) throw new Error('Geçersiz dosya: links bulunamadı');
+        links = data.links.map(l=>({...l, tags: l.tags||[]}));
+        sessions = data.sessions ? data.sessions.map(s=>({...s, links: s.links||[]})) : [];
+        workspace = data.workspace ? data.workspace.map(w=>({...w, tags: w.tags||[]})) : [];
+        viewMode = data.viewMode || 'grid';
+        activeSessionId = data.activeSessionId || null;
+        if(data.extraTags && Array.isArray(data.extraTags)){
+          window.__extraTags = new Set(data.extraTags);
+        } else {
+          window.__extraTags = new Set();
+        }
+        save();
+        renderSessions();
+        renderLinks();
+        renderWorkspace();
+        renderSessionSelect();
+        renderStickyTagBar();
+        renderStickyLeftBar();
+        const old = document.title;
+        document.title = 'Yedek yüklendi';
+        setTimeout(()=>document.title = old, 1200);
+      } catch(err){
+        alert('İçe aktarma hatası: ' + err.message);
+      }
+    };
+    reader.readAsText(file);
+  }
+
+  const exportBtn = $id('export-data');
+  if(exportBtn) exportBtn.addEventListener('click', exportData);
+  const importBtn = $id('import-data');
+  const importFile = $id('import-file');
+  if(importBtn && importFile){
+    importBtn.addEventListener('click', ()=>importFile.click());
+    importFile.addEventListener('change', e=>{
+      const file = e.target.files[0];
+      if(file) importData(file);
+      e.target.value = '';
+    });
+  }
+
+  /* ---------- session editor ---------- */
+  function openSessionEditor(session){
+    const notInSession = links.filter(l => !session.links.some(sl => sl.id === l.id));
+    const html = `
+      <h3>Oturumu Düzenle</h3>
+      <form id="session-form">
+        <label>Ad</label><input name="name" value="${esc(session.name)}" required>
+        <label style="margin-top:10px">Bağlantılar (sürükleyerek sıralayın)</label>
+        <div class="session-link-list" id="session-links-list"></div>
+        <div style="margin-top:10px; display:flex; gap:8px; align-items:center;">
+          <label style="font-size:12px; margin:0; flex:0 0 auto">Yeni ekle:</label>
+          <select id="session-add-select" style="flex:1; padding:6px; border:1px solid #ccc; border-radius:4px;"></select>
+          <button class="btn btn-sm" type="button" id="session-add-btn">Ekle</button>
+        </div>
+        <div class="actions" style="flex-direction:column;gap:8px; margin-top:14px;">
+          <button class="btn" type="submit">Kaydet</button>
+          <button class="btn-ghost" type="button" id="session-cancel">İptal</button>
+        </div>
+      </form>`;
+    openModal(html, ()=>{
+      const form = $id('session-form');
+      const listEl = $id('session-links-list');
+      const addSelect = $id('session-add-select');
+      const addBtn = $id('session-add-btn');
+
+      function renderSessionLinks(){
+        listEl.innerHTML = '';
+        session.links.forEach((l, idx)=>{
+          const div = document.createElement('div');
+          div.className = 'session-link-item';
+          div.setAttribute('data-id', l.id);
+          div.draggable = true;
+          div.innerHTML = `
+            <span class="drag-handle">⠿</span>
+            <span class="name">${esc(l.name)}</span>
+            <span class="url">${esc(l.url)}</span>
+            <button class="remove" data-action="removelink" data-id="${esc(l.id)}">×</button>`;
+          listEl.appendChild(div);
+        });
+        initSessionLinkDrag(listEl);
+      }
+
+      function populateSelect(){
+        addSelect.innerHTML = '';
+        notInSession.forEach(l=>{
+          const opt = document.createElement('option');
+          opt.value = l.id;
+          opt.textContent = esc(l.name) + ' · ' + esc(l.url);
+          addSelect.appendChild(opt);
+        });
+      }
+
+      renderSessionLinks();
+      populateSelect();
+
+      listEl.addEventListener('click', e=>{
+        const btn = e.target.closest('[data-action]');
+        if(btn && btn.getAttribute('data-action')==='removelink'){
+          const id = btn.getAttribute('data-id');
+          const l = findLink(id);
+          if(l){
+            session.links = session.links.filter(sl => sl.id !== l.id);
+            notInSession.push(l);
+            save();
+            renderSessionLinks();
+            populateSelect();
+          }
+        }
+      });
+
+      if(addBtn){
+        addBtn.addEventListener('click', ()=>{
+          const id = addSelect.value;
+          if(!id) return;
+          const l = findLink(id);
+          if(l && !session.links.some(sl=>sl.id===l.id)){
+            session.links.push(l);
+            notInSession.splice(notInSession.indexOf(l),1);
+            save();
+            renderSessionLinks();
+            populateSelect();
+          }
+        });
+      }
+
+      if(form){
+        form.addEventListener('keydown', e=>{
+          if(e.key === 'Enter' && e.target.tagName !== 'TEXTAREA'){
+            e.preventDefault();
+            form.requestSubmit();
+          }
+        });
+        form.addEventListener('submit', e=>{
+          e.preventDefault();
+          session.name = form.name.value.trim() || session.name;
+          save();
+          renderSessions();
+          renderSessionSelect();
+          closeModal();
+        });
+      }
+      const cancel = $id('session-cancel');
+      if(cancel) cancel.addEventListener('click', closeModal);
+    });
+  }
+
+  function initSessionLinkDrag(container){
+    let dragged = null;
+    container.querySelectorAll('.session-link-item').forEach(item=>{
+      item.addEventListener('dragstart', e=>{
+        dragged = item;
+        item.classList.add('dragging');
+        e.dataTransfer.effectAllowed = 'move';
+        e.dataTransfer.setData('text/plain', item.getAttribute('data-id'));
+      });
+      item.addEventListener('dragend', e=>{
+        item.classList.remove('dragging');
+        dragged = null;
+        persistSessionOrder();
+      });
+    });
+    container.addEventListener('dragover', e=>{
+      e.preventDefault();
+      e.dataTransfer.dropEffect = 'move';
+      const after = getDragAfterElement(container, e.clientY);
+      const dragging = document.querySelector('.session-link-item.dragging');
+      if(!dragging) return;
+      if(after == null) container.appendChild(dragging);
+      else container.insertBefore(dragging, after);
+    });
+    container.addEventListener('drop', e=>{
+      e.preventDefault();
+      container.querySelectorAll('.session-link-item').forEach(i=>i.classList.remove('dragging'));
+      persistSessionOrder();
+    });
+  }
+
+  function persistSessionOrder(){
+    const nameInput = $id('session-form')?.name;
+    if(!nameInput) return;
+    const session = sessions.find(s => s.name === nameInput.value);
+    if(!session) return;
+    const ids = [...document.querySelectorAll('#session-links-list .session-link-item')].map(i=>i.getAttribute('data-id'));
+    const map = {};
+    session.links.forEach(l=>map[l.id]=l);
+    session.links = ids.map(id=>map[id]).filter(Boolean);
+    save();
+  }
+
+  /* ---------- modal ---------- */
+  const modal = $id('modal');
+  const modalContent = $id('modal-content');
+  const modalClose = $id('modal-close');
+
+  function openModal(html, onReady){
+    if(!modal || !modalContent) return;
+    modalContent.innerHTML = html;
+    modal.classList.remove('hidden');
+    if(onReady) onReady();
+  }
+  function closeModal(){
+    if(modal) modal.classList.add('hidden');
+    if(modalContent) modalContent.innerHTML = '';
+  }
+  if(modalClose) modalClose.addEventListener('click', closeModal);
+  if(modal) modal.addEventListener('click', e=>{ if(e.target === modal) closeModal(); });
+
+  /* ---------- tabs ---------- */
+  function showTab(name){
+    document.querySelectorAll('.nav-btn').forEach(b=>{
+      b.classList.toggle('active', b.getAttribute('data-tab') === name);
+    });
+    ['workspace','links','sessions'].forEach(t=>{
+      const el = $id('tab-' + t);
+      if(el) el.classList.toggle('hidden', t !== name);
+    });
+    if(name === 'links') renderLinks();
+    else if(name === 'sessions') renderSessions();
+    else renderWorkspace();
+    renderStickyTagBar();
+    renderStickyLeftBar();
+  }
+
+  document.querySelectorAll('.nav-btn').forEach(b=>{
+    b.addEventListener('click', () => {
+      currentTab = b.getAttribute('data-tab');
+      showTab(currentTab);
+    });
+  });
+
+  /* ---------- view switching ---------- */
+  const viewGroup = $id('view-group');
+  if(viewGroup){
+    viewGroup.addEventListener('click', e=>{
+      const btn = e.target.closest('.view-btn');
+      if(!btn) return;
+      viewMode = btn.getAttribute('data-view');
+      save();
+      renderWorkspace();
+    });
+  }
+
+  /* ---------- tag filter clear from badge ---------- */
+  document.body.addEventListener('click', e=>{
+    const btn = e.target.closest('[data-action="cleartagfilter"]');
+    if(btn){
+      filterTag = null;
+      renderWorkspace();
+      renderLinks();
+    }
+  });
+
+  /* ---------- sticky tag bar add ---------- */
+  const stickyNewTag = $id('sticky-new-tag');
+  if(stickyNewTag){
+    stickyNewTag.addEventListener('keydown', e=>{
+      if(e.key === 'Enter'){
+        e.preventDefault();
+        const t = stickyNewTag.value.trim();
+        if(!t) return;
+        if(!allTagsWithExtra().includes(t)){
+          if(!window.__extraTags) window.__extraTags = new Set();
+          window.__extraTags.add(t);
+        }
+        stickyNewTag.value = '';
+        save();
+        renderStickyTagBar();
+      }
+    });
+  }
+
+  /* ---------- service worker for offline cache ---------- */
+  if('serviceWorker' in navigator && location.protocol !== 'file:'){
+    navigator.serviceWorker.register('sw.js').catch(()=>{});
+  }
+
+  /* ---------- init ---------- */
+  currentTab = 'workspace';
+  addDirtyBanner();
+  showTab('workspace');
+})();
+</script>
+</body>
 </html>
-
